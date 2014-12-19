@@ -1,4 +1,4 @@
-import BaseView from 'dist/view/base_view';
+import BaseView from 'js/view/base_view';
 
 export default class ListView extends BaseView {
 

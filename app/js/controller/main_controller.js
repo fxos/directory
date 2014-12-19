@@ -1,5 +1,5 @@
-import BaseController from 'dist/controller/base_controller';
-import ListController from 'dist/controller/list_controller';
+import BaseController from 'js/controller/base_controller';
+import ListController from 'js/controller/list_controller';
 
 export default class MainController extends BaseController {
 

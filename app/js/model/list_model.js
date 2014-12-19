@@ -1,4 +1,4 @@
-import BaseModel from 'dist/model/base_model';
+import BaseModel from 'js/model/base_model';
 
 export default class ListModel extends BaseModel {
   getAppList() {
