@@ -1,30 +1,30 @@
-import BaseController from 'js/controller/base_controller';
+import { Controller } from 'components/fxos-mvc/mvc';
 import ListController from 'js/controller/list_controller';
 
-export default class MainController extends BaseController {
+export default class MainController extends Controller {
 
-  constructor() {
-    this.controllers = {
-      'list': new ListController()
-    };
-  }
+	constructor() {
+		this.controllers = {
+			'list': new ListController()
+		};
 
-  main() {
-    window.addEventListener('hashchanged', this.route.bind(this));
-    this.route();
-    document.body.classList.remove('loading');
-  }
+		this.activeController = null;
+	}
 
-  route() {
-    var controller;
+	main() {
+		window.addEventListener('hashchanged', this.route.bind(this));
+		this.route();
+		document.body.classList.remove('loading');
+	}
 
-    var route = this.getRoute();
-    switch (route) {
-      default:
-        controller = this.controllers.list;
-        break;
-    }
+	route() {
+		var route = window.location.hash;
+		switch (route) {
+			default:
+				this.activeController = this.controllers.list;
+				break;
+		}
 
-    controller.main();
-  }
+		this.activeController.main();
+	}
 }
