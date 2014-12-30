@@ -7,10 +7,13 @@ export default class ListController extends Controller {
 	constructor() {
 		this.model = new ListModel();
 		this.view = new ListView();
-		document.body.appendChild(this.view.el);
 	}
 
 	main() {
+		this.showList();
+	}
+
+	showList() {
 		this.view.render();
 
 		this.appList = this.model.getAppList();
@@ -20,6 +23,8 @@ export default class ListController extends Controller {
 			btn.addEventListener('click',
 				this.installApp.bind(this, appData.manifest, appData.type));
 		}
+
+		document.body.appendChild(this.view.el);
 	}
 
 	installApp(manifest, type) {
