@@ -7,6 +7,6 @@
     "app/componenets"
   ],
   "dependencies": {
-    "fxos-mvc": "git@github.com:fxos/mvc.git#mvc-for-directory"
+    "fxos-mvc": "git@github.com:fxos/mvc.git"
   }
 }
