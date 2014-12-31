@@ -1,4 +1,4 @@
-import { Controller } from 'components/fxos-mvc/mvc';
+import { Controller } from 'components/fxos-mvc/dist/mvc';
 
 import ListModel from 'js/model/list_model';
 import ListView from 'js/view/list_view';

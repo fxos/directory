@@ -1,4 +1,4 @@
-import { View } from 'components/fxos-mvc/mvc';
+import { View } from 'components/fxos-mvc/dist/mvc';
 
 export default class ListView extends View {
 

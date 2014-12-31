@@ -1,12 +1,13 @@
 {
-  "name": "fxos-directory",
-  "description": "Directory Listing for Hackable Apps",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "app/componenets"
-  ],
-  "dependencies": {
-    "fxos-mvc": "git@github.com:fxos/mvc.git"
-  }
+	"name": "fxos-directory",
+	"description": "Directory Listing for Hackable Apps",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"app/componenets"
+	],
+	"dependencies": {
+		"fxos-mvc": "git@github.com:fxos/mvc.git",
+		"gaia-header" : "gaia-components/gaia-header"
+	}
 }
