@@ -11,6 +11,7 @@
 		"gaia-theme": "gaia-components/gaia-theme",
 		"gaia-header" : "gaia-components/gaia-header",
 		"gaia-list": "gaia-components/gaia-list",
-		"gaia-button": "gaia-components/gaia-button"
+		"gaia-button": "gaia-components/gaia-button",
+		"gaia-fonts": "gaia-components/gaia-fonts"
 	}
 }
