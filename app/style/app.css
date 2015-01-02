@@ -1,11 +1,37 @@
 body {
 	margin: 0;
+	font-size: 10px;
 }
 
 body.loading {
 	background: url(/img/gears.svg) 50% 50%;
 }
 
-button {
-	height: 4rem;
+#app-list {
+	font-size: 25px;
+}
+
+#app-list > li {
+	height: 3.4rem;
+	line-height: 3.4rem;
+	padding: .3rem;
+}
+
+#app-list > li:nth-child(odd) {
+	background-color: #eaeaea;
+}
+
+#app-list .app-icon {
+	max-height: 100%;
+	float: left;
+	margin-right: 13px;
+}
+
+#app-list .app-description {
+	display: block;
+}
+
+#app-list .app-install {
+	float: right;
+	margin: 0 !important;
 }
