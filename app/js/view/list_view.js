@@ -8,12 +8,10 @@ export default class ListView extends View {
 
 	listItemTemplate(name, type) {
 		var string = `
-			<a>
-				<div>
-					${name}, ${type}
-					<button>Install</button>
-				</div>
-			</a>`;
+			<div>
+				${name}, ${type}
+				<button>Install</button>
+			</div>`;
 		return string;
 	}
 
