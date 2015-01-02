@@ -1,8 +1,11 @@
+body {
+	margin: 0;
+}
+
 body.loading {
 	background: url(/img/gears.svg) 50% 50%;
 }
 
 button {
-	width: 100%;
 	height: 4rem;
 }

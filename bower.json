@@ -8,6 +8,8 @@
 	],
 	"dependencies": {
 		"fxos-mvc": "git@github.com:fxos/mvc.git",
-		"gaia-header" : "gaia-components/gaia-header"
+		"gaia-theme": "gaia-components/gaia-theme",
+		"gaia-header" : "gaia-components/gaia-header",
+		"gaia-list": "gaia-components/gaia-list"
 	}
 }
