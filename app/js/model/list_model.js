@@ -3,14 +3,16 @@ import { Model } from 'components/fxos-mvc/dist/mvc';
 export default class ListModel extends Model {
 	getAppList() {
 		return {
-			video: {
+			'http://fxos.github.io/video/app/manifest.webapp': {
+				manifestURL: 'http://fxos.github.io/video/app/manifest.webapp',
+				name: 'video',
 				type: 'hosted',
-				manifest: 'http://fxos.github.io/video/app/manifest.webapp',
 				url: 'https://github.com/fxos/video'
 			},
-			contacts: {
+			'http://static.henretty.us/manifest.webapp': {
+				mainfestURL: 'http://static.henretty.us/manifest.webapp',
+				name: 'contacts',
 				type: 'packaged',
-				manifest: 'http://static.henretty.us/manifest.webapp',
 				url: 'https://github.com/fxos/contacts'
 			}
 		};

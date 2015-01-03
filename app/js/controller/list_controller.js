@@ -7,6 +7,8 @@ export default class ListController extends Controller {
 	constructor() {
 		this.model = new ListModel();
 		this.view = new ListView();
+
+		this.installedApps = Object.create(null);
 	}
 
 	main() {
@@ -15,19 +17,49 @@ export default class ListController extends Controller {
 
 	showList() {
 		this.view.render();
+		document.body.appendChild(this.view.el);
 
 		this.appList = this.model.getAppList();
-		for (let appName in this.appList) {
-			let appData = this.appList[appName];
-			let btn = this.view.addAppButton(appName, appData.type);
-			btn.addEventListener('click',
-				this.installApp.bind(this, appData.manifest, appData.type));
-		}
+		this.view.update(this.appList);
+		this.view.onAppClick(this.handleAppClick.bind(this));
 
-		document.body.appendChild(this.view.el);
+		this.refreshInstalledList();
 	}
 
-	installApp(manifest, type) {
+	refreshInstalledList() {
+		this.installedApps = Object.create(null);
+		var req = navigator.mozApps.mgmt.getAll();
+
+		req.onsuccess = () => {
+			var apps = req.result;
+			var installedApps = Object.create(null);
+			apps.forEach(app => {
+				installedApps[app.manifestURL] = app;
+			});
+			for (let manifestURL in this.appList) {
+				this.appList[manifestURL].installed = !!installedApps[manifestURL];
+				this.appList[manifestURL].mozApp = installedApps[manifestURL] || false;
+			}
+			this.view.update(this.appList);
+		};
+
+		req.onerror = e => {
+			console.log('error fetching installed apps: ', e);
+		};
+	}
+
+	handleAppClick(appData) {
+		var manifestURL = appData.manifestURL;
+		if (this.appList[manifestURL].mozApp) {
+			this.appList[manifestURL].mozApp.launch();
+		} else {
+			this.installApp(appData);
+		}
+	}
+
+	installApp(appData) {
+		var manifest = appData.manifestURL;
+		var type = appData.type;
 		var installReq;
 		if (type === 'hosted') {
 			console.log('installing hosted app, ', manifest);
@@ -42,9 +74,8 @@ export default class ListController extends Controller {
 		installReq.onerror = function(err) {
 			console.log('install error', err);
 		};
-		installReq.onsuccess = function() {
-			console.log('installed');
-			// TODO: launch the app?
+		installReq.onsuccess = () => {
+			this.refreshInstalledList();
 		};
 	}
 }
