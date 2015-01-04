@@ -9,8 +9,8 @@ export default class ListModel extends Model {
 				type: 'hosted',
 				url: 'https://github.com/fxos/video'
 			},
-			'http://static.henretty.us/manifest.webapp': {
-				mainfestURL: 'http://static.henretty.us/manifest.webapp',
+			'http://henretty.us/manifest.webapp': {
+				manifestURL: 'http://henretty.us/manifest.webapp',
 				name: 'contacts',
 				type: 'packaged',
 				url: 'https://github.com/fxos/contacts'
