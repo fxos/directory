@@ -63,10 +63,18 @@ export default class ListController extends Controller {
 		var installReq;
 		if (type === 'hosted') {
 			console.log('installing hosted app, ', manifest);
-			installReq = navigator.mozApps.install(manifest);
+			installReq = navigator.mozApps.install(manifest, {
+				installMetaData: {
+					url: appData.url
+				}
+			});
 		} else if (type === 'packaged') {
 			console.log('installing packaged app, ', manifest);
-			installReq = navigator.mozApps.installPackage(manifest);
+			installReq = navigator.mozApps.installPackage(manifest, {
+				installMetaData: {
+					url: appData.url
+				}
+			});
 		} else {
 			throw new Error('Could not install app, unrecognized type: ' + type);
 		}
