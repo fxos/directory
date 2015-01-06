@@ -11,9 +11,9 @@ export default class ListModel extends Model {
 			},
 			'http://henretty.us/manifest.webapp': {
 				manifestURL: 'http://henretty.us/manifest.webapp',
-				name: 'contacts',
+				name: 'clock',
 				type: 'packaged',
-				url: 'https://github.com/fxos/contacts'
+				url: 'https://github.com/mozilla-b2g/gaia/tree/apps/clock/'
 			}
 		};
 	}
