@@ -36,3 +36,7 @@ body.loading {
 	float: right;
 	margin: 0 !important;
 }
+
+#confirm-dialog {
+	z-index: 10;
+}
