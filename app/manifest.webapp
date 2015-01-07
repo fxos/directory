@@ -2,7 +2,7 @@
   "name": "Apps Directory",
   "description": "Directory Listing for Hackable Apps",
   "type": "certified",
-  "launch_path": "/index.html",
+  "launch_path": "./index.html",
   "permissions": {
     "webapps-manage": {
       "description": "For installing apps"
