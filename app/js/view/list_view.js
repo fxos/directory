@@ -70,7 +70,7 @@ export default class ListView extends View {
 
 	listItemTemplate({ name, type }) {
 		var string = `
-			<img class="app-icon" src="/img/app_icons/${name}.png" />
+			<img class="app-icon" src="./img/app_icons/${name}.png" />
 			<gaia-button circular disabled class="app-install">
 				<i class="action-icon" data-icon="repeat"></i>
 			</gaia-button>
