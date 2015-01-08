@@ -1,1 +1,1 @@
-window.COMPONENTS_BASE_URL = '/components/';
+window.COMPONENTS_BASE_URL = './components/';
