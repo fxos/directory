@@ -65,14 +65,16 @@ export default class ListController extends Controller {
 			console.log('installing hosted app, ', manifest);
 			installReq = navigator.mozApps.install(manifest, {
 				installMetaData: {
-					url: appData.url
+					url: appData.url,
+					revision: appData.revision
 				}
 			});
 		} else if (type === 'packaged') {
 			console.log('installing packaged app, ', manifest);
 			installReq = navigator.mozApps.installPackage(manifest, {
 				installMetaData: {
-					url: appData.url
+					url: appData.url,
+					revision: appData.revision
 				}
 			});
 		} else {
