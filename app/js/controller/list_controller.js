@@ -28,7 +28,15 @@ export default class ListController extends Controller {
 
 	refreshInstalledList() {
 		this.installedApps = Object.create(null);
-		var req = navigator.mozApps.mgmt.getAll();
+
+		// Use mgmt.getAll if available to fetch apps,
+		// otherwise use mozApp.getInstalled.
+		var req;
+		if (navigator.mozApps.mgmt && navigator.mozApps.mgmt.getAll) {
+			req = navigator.mozApps.mgmt.getAll();
+		} else {
+			req = navigator.mozApps.getInstalled();
+		}
 
 		req.onsuccess = () => {
 			var apps = req.result;
