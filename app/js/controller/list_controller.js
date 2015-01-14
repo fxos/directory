@@ -12,6 +12,8 @@ export default class ListController extends Controller {
 	}
 
 	main() {
+		document.addEventListener('visibilitychange',
+			this.refreshInstalledList.bind(this));
 		this.showList();
 	}
 
