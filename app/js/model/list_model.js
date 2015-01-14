@@ -17,8 +17,8 @@ export default class ListModel extends Model {
 				url: 'https://github.com/fxos/video',
 				revision: 'b3c913669bc7039e980586bd9d319a0ca2ac6003'
 			},
-			'http://fxos.github.io/dialer/app/manifest.webapp': {
-				manifestURL: 'http://fxos.github.io/dialer/app/manifest.webapp',
+			'http://fxos.github.io/dialer/dist/app/manifest.webapp': {
+				manifestURL: 'http://fxos.github.io/dialer/dist/app/manifest.webapp',
 				name: 'dialer',
 				type: 'hosted',
 				url: 'https://github.com/fxos/dialer',
