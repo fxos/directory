@@ -1,6 +1,7 @@
 import { View } from 'components/fxos-mvc/dist/mvc';
 import 'components/gaia-list/gaia-list';
 import 'components/gaia-button/gaia-button';
+import 'components/gaia-dialog/gaia-dialog-alert';
 
 function capitalize(string) {
 	return string[0].toUpperCase() + string.slice(1);
@@ -12,6 +13,18 @@ export default class ListView extends View {
 		this.el.id = 'app-list';
 		this.appElements = Object.create(null);
 		this.clickHandlers = [];
+	}
+
+	template() {
+		return `<gaia-dialog-alert id="alert-dialog">Placeholder</gaia-dialog-alert>`;
+	}
+
+	showAlertDialog(msg) {
+		if (!this.alertDialog) {
+			this.alertDialog = document.querySelector('#alert-dialog');
+		}
+		this.alertDialog.textContent = msg;
+		this.alertDialog.open();
 	}
 
 	update(appList) {

@@ -9,6 +9,10 @@ export default class ListController extends Controller {
 		this.view = new ListView();
 
 		this.installedApps = Object.create(null);
+
+		window.onerror = (e) => {
+			this.view.showAlertDialog('Unhandled exception: ' + e.message);
+		};
 	}
 
 	main() {
@@ -54,6 +58,7 @@ export default class ListController extends Controller {
 		};
 
 		req.onerror = e => {
+			this.view.showAlertDialog('error fetching install apps: ' + e.message);
 			console.log('error fetching installed apps: ', e);
 		};
 	}
@@ -91,7 +96,8 @@ export default class ListController extends Controller {
 			throw new Error('Could not install app, unrecognized type: ' + type);
 		}
 
-		installReq.onerror = function(err) {
+		installReq.onerror = (err) => {
+			this.view.showAlertDialog('Error installing: ' + err.target.error.name);
 			console.log('install error', err);
 		};
 		installReq.onsuccess = () => {
