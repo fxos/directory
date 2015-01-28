@@ -3,6 +3,13 @@ import { Model } from 'components/fxos-mvc/dist/mvc';
 export default class ListModel extends Model {
 	getAppList() {
 		return {
+			'http://fxos.github.io/sharing/dist/app/manifest.webapp': {
+				manifestURL: 'http://fxos.github.io/sharing/dist/app/manifest.webapp',
+				name: 'sharing',
+				type: 'hosted',
+				url: 'https://github.com/fxos/sharing',
+				revision: 'e908d4eff5799b038fd318084254a8b93709bada'
+			},
 			'http://fxos.github.io/camera/dist/app/manifest.webapp': {
 				manifestURL: 'http://fxos.github.io/camera/dist/app/manifest.webapp',
 				name: 'camera',
