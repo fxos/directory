@@ -1,7 +1,7 @@
 {
   "name": "fxos-directory",
   "description": "Directory Listing for Hackable Apps",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "git@github.com:fxos/directory.git"
