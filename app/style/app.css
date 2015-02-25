@@ -8,6 +8,11 @@ body.loading {
 	background: url(../img/gears.svg) 50% 50%;
 }
 
+gaia-header #upload-link {
+  background: url(../img/upload.svg) no-repeat 50% 50% / 38px !important;
+  filter: invert(100%);
+}
+
 #app-list {
 	font-size: 25px;
 }
