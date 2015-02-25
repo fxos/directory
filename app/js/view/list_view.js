@@ -84,10 +84,10 @@ export default class ListView extends View {
 	listItemTemplate({ name, type }) {
 		var string = `
 			<img class="app-icon" src="./img/app_icons/${name}.png" />
+			<h1 flex class="app-description">${capitalize(name)}</h1>
 			<gaia-button circular disabled class="app-install">
 				<i class="action-icon" data-icon="repeat"></i>
-			</gaia-button>
-			<span class="app-description">${capitalize(name)}</span>`;
+			</gaia-button>`;
 		return string;
 	}
 

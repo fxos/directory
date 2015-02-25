@@ -12,14 +12,17 @@ body.loading {
 	font-size: 25px;
 }
 
-#app-list > li {
-	height: 3.4rem;
-	line-height: 3.4rem;
-	padding: .3rem;
+#app-list > .app-item {
+	height: 3.4rem !important;
+	line-height: 3.4rem !important;
+	padding: .3rem !important;
+}
+#app-list > .app-item::before {
+	display: none !important;
 }
 
-#app-list > li:nth-child(odd) {
-	background-color: #eaeaea;
+#app-list > .app-item:nth-child(odd) {
+	background-color: #eaeaea !important;
 }
 
 #app-list .app-icon {
@@ -29,10 +32,15 @@ body.loading {
 }
 
 #app-list .app-description {
-	display: block;
+	color: black !important;
+	font-size: 25px !important;
 }
 
 #app-list .app-install {
 	float: right;
 	margin: 0 !important;
+}
+
+#app-list .action-icon{
+	width: unset !important;
 }
