@@ -5,7 +5,7 @@ export default class MainView extends View {
 	template() {
 		var string = `
 		  <gaia-header>
-				<h1>Hacker Marketplace</h1>
+				<h1>Hackerplace</h1>
         <a id="upload-link" href="https://github.com/fxos/directory"></a>
 			</gaia-header>`;
 		return string;
