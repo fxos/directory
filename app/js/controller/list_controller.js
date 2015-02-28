@@ -1,17 +1,19 @@
 import { Controller } from 'components/fxos-mvc/dist/mvc';
 
 import ListModel from 'js/model/list_model';
-import ListView from 'js/view/list_view';
+import AppListView from 'js/view/app_list_view';
+import AddonListView from 'js/view/addon_list_view';
 
 export default class ListController extends Controller {
   constructor() {
     this.model = new ListModel();
-    this.view = new ListView();
+    this.appView = new AppListView();
+    this.addonView = new AddonListView();
 
     this.installedApps = Object.create(null);
 
     window.onerror = (e) => {
-      this.view.showAlertDialog('Unhandled exception: ' + e.message);
+      this.appView.showAlertDialog('Unhandled exception: ' + e.message);
     };
   }
 
@@ -22,12 +24,16 @@ export default class ListController extends Controller {
   }
 
   showList() {
-    this.view.render();
-    document.body.appendChild(this.view.el);
+    this.appView.render();
+    document.body.appendChild(this.appView.el);
+    this.addonView.render();
+    document.body.appendChild(this.addonView.el);
 
-    this.appList = this.model.getAppList();
-    this.view.update(this.appList);
-    // this.view.onAppClick(this.handleAppClick.bind(this));
+    this.list = this.model.getAppList();
+    this.appView.update(this.list);
+    this.addonView.update(this.list);
+    // this.appView.onAppClick(this.handleAppClick.bind(this));
+    // this.addonView.onAppClick(this.handleAppClick.bind(this));
 
     this.refreshInstalledList();
   }
@@ -50,15 +56,16 @@ export default class ListController extends Controller {
       apps.forEach(app => {
         installedApps[app.manifestURL] = app;
       });
-      for (let manifestURL in this.appList) {
-        this.appList[manifestURL].installed = !!installedApps[manifestURL];
-        this.appList[manifestURL].mozApp = installedApps[manifestURL] || false;
+      for (let manifestURL in this.list) {
+        this.list[manifestURL].installed = !!installedApps[manifestURL];
+        this.list[manifestURL].mozApp = installedApps[manifestURL] || false;
       }
-      this.view.update(this.appList);
+      this.appView.update(this.list);
+      this.addonView.update(this.list);
     };
 
     req.onerror = e => {
-      this.view.showAlertDialog('error fetching install apps: ' + e.message);
+      this.appView.showAlertDialog('error fetching install apps: ' + e.message);
       console.log('error fetching installed apps: ', e);
     };
   }
@@ -66,8 +73,8 @@ export default class ListController extends Controller {
   /* XXX: disable installing apps for now
   handleAppClick(appData) {
     var manifestURL = appData.manifestURL;
-    if (this.appList[manifestURL].mozApp) {
-      this.appList[manifestURL].mozApp.launch();
+    if (this.list[manifestURL].mozApp) {
+      this.list[manifestURL].mozApp.launch();
     } else {
       this.installApp(appData);
     }
@@ -98,7 +105,7 @@ export default class ListController extends Controller {
     }
 
     installReq.onerror = (err) => {
-      this.view.showAlertDialog('Error installing: ' + err.target.error.name);
+      this.appView.showAlertDialog('Error installing: ' + err.target.error.name);
       console.log('install error', err);
     };
     installReq.onsuccess = () => {

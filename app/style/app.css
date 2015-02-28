@@ -13,40 +13,40 @@ gaia-header #upload-link {
   filter: invert(100%);
 }
 
-#app-list > .app-item {
+.install-list > .item {
   height: 66px;
 }
 
-#app-list > .app-item::before {
+.install-list > .item::before {
   display: none !important;
 }
 
-#app-list > .app-item:nth-child(odd) {
+.install-list > .item:nth-child(odd) {
   background-color: #eaeaea !important;
 }
 
-#app-list .app-icon {
+.install-list .icon {
   max-height: 100%;
   float: left;
   margin-right: 13px;
 }
 
-#app-list .app-description {
+.install-list .description {
   color: black !important;
 }
 
-.app-name {
+.install-list .name {
   font-size: 19px !important;
   margin: 0;
 }
 
-.app-author {
+.author {
   font-size: 15px !important;
   margin: 0 0 0 2px;
   color: #545454 !important;
 }
 
-#app-list .app-details {
+.install-list .details {
   float: right;
   color: #626262;
 }

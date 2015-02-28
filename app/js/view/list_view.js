@@ -10,9 +10,9 @@ function capitalize(string) {
 export default class ListView extends View {
   constructor() {
     this.el = document.createElement('gaia-list');
-    this.el.id = 'app-list';
-    this.appElements = Object.create(null);
-    this.clickHandlers = [];
+    this.el.className = 'install-list';
+    this.elements = Object.create(null);
+    // this.clickHandlers = [];
   }
 
   template() {
@@ -27,13 +27,13 @@ export default class ListView extends View {
     this.alertDialog.open();
   }
 
-  update(appList) {
-    for (let manifestURL in appList) {
-      let appData = appList[manifestURL];
-      if (!this.appElements[manifestURL]) {
-        this.appElements[manifestURL] = this.addAppElement(appData);
+  update(list) {
+    for (let manifestURL in list) {
+      let data = list[manifestURL];
+      if (!this.elements[manifestURL]) {
+        this.elements[manifestURL] = this.addElement(data);
       }
-      this.updateAppElement(this.appElements[manifestURL], appData);
+      this.updateElements(this.elements[manifestURL], data);
     }
   }
 
@@ -52,25 +52,25 @@ export default class ListView extends View {
   }
   */
 
-  addAppElement(appData) {
+  addElement(data) {
     var item = document.createElement('li');
-    item.className = 'app-item';
-    item.innerHTML = this.listItemTemplate(appData);
+    item.className = 'item';
+    item.innerHTML = this.listItemTemplate(data);
     this.el.appendChild(item);
     return item;
   }
 
-  updateAppElement(appElement, appData) {
+  updateElements(element, data) {
     // XXX: disabling for now, but we should revisit when we
     //      want the list page to display if apps are install
 
-    // var button = appElement.querySelector('.app-install');
+    // var button = element.querySelector('.app-install');
     // var icon = button.querySelector('.action-icon');
 
-    // if (appData.installed === true) {
+    // if (data.installed === true) {
     //   button.disabled = false;
     //   icon.dataset.icon = 'play';
-    // } else if (appData.installed === false) {
+    // } else if (data.installed === false) {
     //   button.disabled = false;
     //   icon.dataset.icon = 'download';
     // } else {
@@ -81,12 +81,12 @@ export default class ListView extends View {
 
   listItemTemplate({ name, author }) {
     var string = `
-      <img class="app-icon" src="./img/app_icons/${name}.png" />
-      <div flex class="app-description">
-        <p class="app-name">${capitalize(name)}</p>
-        <p class="app-author">${author}</p>
+      <img class="icon" src="./img/app_icons/${name}.png" />
+      <div flex class="description">
+        <p class="name">${capitalize(name)}</p>
+        <p class="author">${author}</p>
       </div>
-      <i class="app-details" data-icon="forward"></i>`;
+      <i class="details" data-icon="forward"></i>`;
     return string;
   }
 

@@ -23,7 +23,7 @@ export default class ListModel extends Model {
 				manifestURL: 'http://fxos.github.io/video/app/manifest.webapp',
 				name: 'video',
 				author: 'Justin D\'Arcangelo',
-				type: 'hosted',
+				type: 'addon',
 				url: 'https://github.com/fxos/video',
 				revision: 'b3c913669bc7039e980586bd9d319a0ca2ac6003'
 			},
@@ -31,7 +31,7 @@ export default class ListModel extends Model {
 				manifestURL: 'http://fxos.github.io/dialer/dist/app/manifest.webapp',
 				name: 'dialer',
 				author: 'Doug Sherk',
-				type: 'hosted',
+				type: 'addon',
 				url: 'https://github.com/fxos/dialer',
 				revision: '835af6ccf608a51bc87711d1c40fc4f33a1fc12b'
 			},
