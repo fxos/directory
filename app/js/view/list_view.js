@@ -4,91 +4,91 @@ import 'components/gaia-button/gaia-button';
 import 'components/gaia-dialog/gaia-dialog-alert';
 
 function capitalize(string) {
-	return string[0].toUpperCase() + string.slice(1);
+  return string[0].toUpperCase() + string.slice(1);
 }
 
 export default class ListView extends View {
-	constructor() {
-		this.el = document.createElement('gaia-list');
-		this.el.id = 'app-list';
-		this.appElements = Object.create(null);
-		this.clickHandlers = [];
-	}
+  constructor() {
+    this.el = document.createElement('gaia-list');
+    this.el.className = 'install-list';
 
-	template() {
-		return `<gaia-dialog-alert id="alert-dialog">Placeholder</gaia-dialog-alert>`;
-	}
+    this.elements = Object.create(null);
+    this.clickHandlers = [];
+  }
 
-	showAlertDialog(msg) {
-		if (!this.alertDialog) {
-			this.alertDialog = document.querySelector('#alert-dialog');
-		}
-		this.alertDialog.textContent = msg;
-		this.alertDialog.open();
-	}
+  showAlertDialog(msg) {
+    if (!this.alertDialog) {
+      this.alertDialog = document.querySelector('#alert-dialog');
+    }
+    this.alertDialog.textContent = msg;
+    this.alertDialog.open();
+  }
 
-	update(appList) {
-		for (let manifestURL in appList) {
-			let appData = appList[manifestURL];
-			if (!this.appElements[manifestURL]) {
-				this.appElements[manifestURL] = this.addAppElement(appData);
-			}
-			this.updateAppElement(this.appElements[manifestURL], appData);
-		}
-	}
+  update(list) {
+    for (let manifestURL in list) {
+      let data = list[manifestURL];
+      if (!this.elements[manifestURL]) {
+        this.elements[manifestURL] = this.addElement(data);
+      }
+      this.updateElements(this.elements[manifestURL], data);
+    }
+  }
 
-	onAppClick(handler) {
-		if (this.clickHandlers.indexOf(handler) === -1) {
-			this.clickHandlers.push(handler);
-		}
-	}
+  onAppClick(handler) {
+    if (this.clickHandlers.indexOf(handler) === -1) {
+      this.clickHandlers.push(handler);
+    }
+  }
 
-	offAppClick(handler) {
-		var index = this.clickHandlers.indexOf(handler);
-		if (index !== -1) {
-			this.clickHandlers.splice(index, 1);
-		}
-	}
+  offAppClick(handler) {
+    var index = this.clickHandlers.indexOf(handler);
+    if (index !== -1) {
+      this.clickHandlers.splice(index, 1);
+    }
+  }
 
-	addAppElement(appData) {
-		var item = document.createElement('li');
-		item.className = 'app-item';
-		item.innerHTML = this.listItemTemplate(appData);
-		this.el.appendChild(item);
+  addElement(data) {
+    var item = document.createElement('li');
+    item.className = 'item';
+    item.innerHTML = this.listItemTemplate(data);
+    this.el.appendChild(item);
 
-		item.querySelector('.app-install').addEventListener('click',
-		function(appData) {
-			this.clickHandlers.forEach((handler) => {
-				handler(appData);
-			});
-		}.bind(this, appData));
-		return item;
-	}
+    item.querySelector('.install-button').addEventListener('click',
+      function(data) {
+        this.clickHandlers.forEach(handler => {
+          handler(data);
+        });
+      }.bind(this, data));
 
-	updateAppElement(appElement, appData) {
-		var button = appElement.querySelector('.app-install');
-		var icon = button.querySelector('.action-icon');
+    return item;
+  }
 
-		if (appData.installed === true) {
-			button.disabled = false;
-			icon.dataset.icon = 'play';
-		} else if (appData.installed === false) {
-			button.disabled = false;
-			icon.dataset.icon = 'download';
-		} else {
-			button.disabled = true;
-			icon.dataset.icon = 'repeat';
-		}
-	}
+  updateElements(element, data) {
+    var button = element.querySelector('.install-button');
+    if (data.installed === true) {
+      button.textContent = 'Launch';
+    } else {
+      button.textContent = 'Install';
+    }
+  }
 
-	listItemTemplate({ name, type }) {
-		var string = `
-			<img class="app-icon" src="./img/app_icons/${name}.png" />
-			<h1 flex class="app-description">${capitalize(name)}</h1>
-			<gaia-button circular disabled class="app-install">
-				<i class="action-icon" data-icon="repeat"></i>
-			</gaia-button>`;
-		return string;
-	}
+  activate() {
+    this.el.classList.add('active');
+  }
+
+  deactivate() {
+    this.el.classList.remove('active');
+  }
+
+  listItemTemplate({ name, author }) {
+    var string = `
+      <img class="icon" src="./img/app_icons/${name}.png" />
+      <div flex class="description">
+        <p class="name">${capitalize(name)}</p>
+        <p class="author">${author}</p>
+      </div>
+      <button class="install-button">Loading...</button>`;
+    return string;
+  }
 
 }

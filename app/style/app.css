@@ -1,11 +1,12 @@
 body {
-	margin: 0;
-	font-size: 10px;
-	font-family: "FiraSans";
+  margin: 0;
+  font-size: 10px;
+  font-family: "FiraSans";
+  overflow-x: hidden;
 }
 
 body.loading {
-	background: url(../img/gears.svg) 50% 50%;
+  background: url(../img/gears.svg) 50% 50%;
 }
 
 gaia-header #upload-link {
@@ -13,39 +14,68 @@ gaia-header #upload-link {
   filter: invert(100%);
 }
 
+.install-list {
+  position: absolute !important;
+  width: 100%;
+}
+
+.install-list > .item {
+  height: 66px;
+}
+
+.install-list > .item::before {
+  display: none !important;
+}
+
+.install-list > .item:nth-child(even) {
+  background-color: #eaeaea !important;
+}
+
+.install-list .icon {
+  max-height: 100%;
+  float: left;
+  margin-right: 13px;
+}
+
+.install-list .description {
+  color: black !important;
+}
+
+.install-list .name {
+  font-size: 19px !important;
+  margin: 0;
+}
+
+.author {
+  font-size: 15px !important;
+  margin: 0 0 0 2px;
+  color: #545454 !important;
+}
+
+.install-list {
+  transition: transform 0.2s ease;
+}
+
+.install-list .install-button {
+  float: right;
+  color: rgba(0, 0, 0, 0.53);
+  background: none;
+  font-size: 15px;
+  font-style: italic;
+  border: 2px solid rgba(0, 0, 0, 0.12);
+  min-width: 73px;
+  border-radius: 10px;
+}
+
 #app-list {
-	font-size: 25px;
+  transform: translateX(-100%);
 }
 
-#app-list > .app-item {
-	height: 3.4rem !important;
-	line-height: 3.4rem !important;
-	padding: .3rem !important;
-}
-#app-list > .app-item::before {
-	display: none !important;
+#addon-list {
+  transform: translateX(100%);
 }
 
-#app-list > .app-item:nth-child(odd) {
-	background-color: #eaeaea !important;
-}
-
-#app-list .app-icon {
-	max-height: 100%;
-	float: left;
-	margin-right: 13px;
-}
-
-#app-list .app-description {
-	color: black !important;
-	font-size: 25px !important;
-}
-
-#app-list .app-install {
-	float: right;
-	margin: 0 !important;
-}
-
-#app-list .action-icon{
-	width: unset !important;
+#app-list.active,
+#addon-list.active {
+  transform: translateX(0);
 }

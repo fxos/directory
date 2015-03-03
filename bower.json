@@ -1,18 +1,19 @@
 {
-	"name": "fxos-directory",
-	"description": "Directory Listing for Hackable Apps",
-	"ignore": [
-		"**/.*",
-		"node_modules",
-		"app/componenets"
-	],
-	"dependencies": {
-		"fxos-mvc": "git@github.com:fxos/mvc.git",
-		"gaia-theme": "gaia-components/gaia-theme",
-		"gaia-header" : "gaia-components/gaia-header",
-		"gaia-list": "gaia-components/gaia-list",
-		"gaia-button": "gaia-components/gaia-button",
-		"gaia-fonts": "gaia-components/gaia-fonts",
-		"gaia-dialog": "gaia-components/gaia-dialog"
-	}
+  "name": "fxos-directory",
+  "description": "Directory Listing for Hackable Apps",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "app/componenets"
+  ],
+  "dependencies": {
+    "fxos-mvc": "git@github.com:fxos/mvc.git",
+    "gaia-theme": "gaia-components/gaia-theme",
+    "gaia-header" : "gaia-components/gaia-header",
+    "gaia-list": "gaia-components/gaia-list",
+    "gaia-button": "gaia-components/gaia-button",
+    "gaia-fonts": "gaia-components/gaia-fonts",
+    "gaia-dialog": "gaia-components/gaia-dialog",
+    "gaia-tabs": "gaia-components/gaia-tabs"
+  }
 }
