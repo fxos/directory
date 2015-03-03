@@ -13,6 +13,11 @@ gaia-header #upload-link {
   filter: invert(100%);
 }
 
+.install-list {
+  position: absolute !important;
+  width: 100%;
+}
+
 .install-list > .item {
   height: 66px;
 }
@@ -46,7 +51,24 @@ gaia-header #upload-link {
   color: #545454 !important;
 }
 
+.install-list {
+  transition: transform 0.2s ease;
+}
+
 .install-list .details {
   float: right;
   color: #626262;
+}
+
+#app-list {
+  transform: translateX(-100%);
+}
+
+#addon-list {
+  transform: translateX(100%);
+}
+
+#app-list.active,
+#addon-list.active {
+  transform: translateX(0);
 }

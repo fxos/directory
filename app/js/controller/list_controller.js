@@ -1,20 +1,20 @@
 import { Controller } from 'components/fxos-mvc/dist/mvc';
 
 import ListModel from 'js/model/list_model';
+import TabsView from 'js/view/tabs_view';
 import AppListView from 'js/view/app_list_view';
 import AddonListView from 'js/view/addon_list_view';
 
 export default class ListController extends Controller {
   constructor() {
     this.model = new ListModel();
+    this.tabsView = new TabsView();
     this.appView = new AppListView();
     this.addonView = new AddonListView();
 
     this.installedApps = Object.create(null);
 
-    window.onerror = (e) => {
-      this.appView.showAlertDialog('Unhandled exception: ' + e.message);
-    };
+    this.tabsView.onTabChange(this.handleTabChange.bind(this));
   }
 
   main() {
@@ -24,6 +24,8 @@ export default class ListController extends Controller {
   }
 
   showList() {
+    this.tabsView.render();
+    document.body.appendChild(this.tabsView.el);
     this.appView.render();
     document.body.appendChild(this.appView.el);
     this.addonView.render();
@@ -36,6 +38,7 @@ export default class ListController extends Controller {
     // this.addonView.onAppClick(this.handleAppClick.bind(this));
 
     this.refreshInstalledList();
+    this.appView.activate();
   }
 
   refreshInstalledList() {
@@ -68,6 +71,16 @@ export default class ListController extends Controller {
       this.appView.showAlertDialog('error fetching install apps: ' + e.message);
       console.log('error fetching installed apps: ', e);
     };
+  }
+
+  handleTabChange(activeTab) {
+    if (activeTab === 'Apps') {
+      this.appView.activate();
+      this.addonView.deactivate();
+    } else {
+      this.addonView.activate();
+      this.appView.deactivate();
+    }
   }
 
   /* XXX: disable installing apps for now

@@ -79,6 +79,14 @@ export default class ListView extends View {
     // }
   }
 
+  activate() {
+    this.el.classList.add('active');
+  }
+
+  deactivate() {
+    this.el.classList.remove('active');
+  }
+
   listItemTemplate({ name, author }) {
     var string = `
       <img class="icon" src="./img/app_icons/${name}.png" />
