@@ -7,19 +7,19 @@ import AddonListView from 'js/view/addon_list_view';
 
 export default class ListController extends Controller {
   constructor() {
+    this.installedApps = Object.create(null);
+
     this.model = new ListModel();
     this.tabsView = new TabsView();
     this.appView = new AppListView();
     this.addonView = new AddonListView();
 
-    this.installedApps = Object.create(null);
-
     this.tabsView.onTabChange(this.handleTabChange.bind(this));
+    document.addEventListener('visibilitychange',
+      this.refreshInstalledList.bind(this));
   }
 
   main() {
-    document.addEventListener('visibilitychange',
-      this.refreshInstalledList.bind(this));
     this.showList();
   }
 
@@ -34,8 +34,8 @@ export default class ListController extends Controller {
     this.list = this.model.getAppList();
     this.appView.update(this.list);
     this.addonView.update(this.list);
-    // this.appView.onAppClick(this.handleAppClick.bind(this));
-    // this.addonView.onAppClick(this.handleAppClick.bind(this));
+    this.appView.onAppClick(this.handleAppClick.bind(this));
+    this.addonView.onAppClick(this.handleAppClick.bind(this));
 
     this.refreshInstalledList();
     this.appView.activate();
@@ -83,7 +83,6 @@ export default class ListController extends Controller {
     }
   }
 
-  /* XXX: disable installing apps for now
   handleAppClick(appData) {
     var manifestURL = appData.manifestURL;
     if (this.list[manifestURL].mozApp) {
@@ -125,5 +124,4 @@ export default class ListController extends Controller {
       this.refreshInstalledList();
     };
   }
-  */
 }

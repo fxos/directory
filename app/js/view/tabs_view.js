@@ -4,6 +4,7 @@ import 'components/gaia-tabs/gaia-tabs';
 export default class TabsView extends View {
   constructor() {
     this.el = document.createElement('div');
+    this.el.id = 'tabs-container';
     this.changeHandlers = [];
   }
 

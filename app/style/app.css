@@ -2,6 +2,7 @@ body {
   margin: 0;
   font-size: 10px;
   font-family: "FiraSans";
+  overflow-x: hidden;
 }
 
 body.loading {
@@ -26,7 +27,7 @@ gaia-header #upload-link {
   display: none !important;
 }
 
-.install-list > .item:nth-child(odd) {
+.install-list > .item:nth-child(even) {
   background-color: #eaeaea !important;
 }
 
@@ -55,9 +56,15 @@ gaia-header #upload-link {
   transition: transform 0.2s ease;
 }
 
-.install-list .details {
+.install-list .install-button {
   float: right;
-  color: #626262;
+  color: rgba(0, 0, 0, 0.53);
+  background: none;
+  font-size: 15px;
+  font-style: italic;
+  border: 2px solid rgba(0, 0, 0, 0.12);
+  min-width: 73px;
+  border-radius: 10px;
 }
 
 #app-list {

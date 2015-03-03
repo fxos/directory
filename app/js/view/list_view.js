@@ -11,12 +11,9 @@ export default class ListView extends View {
   constructor() {
     this.el = document.createElement('gaia-list');
     this.el.className = 'install-list';
-    this.elements = Object.create(null);
-    // this.clickHandlers = [];
-  }
 
-  template() {
-    return `<gaia-dialog-alert id="alert-dialog">Placeholder</gaia-dialog-alert>`;
+    this.elements = Object.create(null);
+    this.clickHandlers = [];
   }
 
   showAlertDialog(msg) {
@@ -37,7 +34,6 @@ export default class ListView extends View {
     }
   }
 
-  /* XXX: disabling app clicks from here
   onAppClick(handler) {
     if (this.clickHandlers.indexOf(handler) === -1) {
       this.clickHandlers.push(handler);
@@ -50,33 +46,30 @@ export default class ListView extends View {
       this.clickHandlers.splice(index, 1);
     }
   }
-  */
 
   addElement(data) {
     var item = document.createElement('li');
     item.className = 'item';
     item.innerHTML = this.listItemTemplate(data);
     this.el.appendChild(item);
+
+    item.querySelector('.install-button').addEventListener('click',
+      function(data) {
+        this.clickHandlers.forEach(handler => {
+          handler(data);
+        });
+      }.bind(this, data));
+
     return item;
   }
 
   updateElements(element, data) {
-    // XXX: disabling for now, but we should revisit when we
-    //      want the list page to display if apps are install
-
-    // var button = element.querySelector('.app-install');
-    // var icon = button.querySelector('.action-icon');
-
-    // if (data.installed === true) {
-    //   button.disabled = false;
-    //   icon.dataset.icon = 'play';
-    // } else if (data.installed === false) {
-    //   button.disabled = false;
-    //   icon.dataset.icon = 'download';
-    // } else {
-    //   button.disabled = true;
-    //   icon.dataset.icon = 'repeat';
-    // }
+    var button = element.querySelector('.install-button');
+    if (data.installed === true) {
+      button.textContent = 'Launch';
+    } else {
+      button.textContent = 'Install';
+    }
   }
 
   activate() {
@@ -94,7 +87,7 @@ export default class ListView extends View {
         <p class="name">${capitalize(name)}</p>
         <p class="author">${author}</p>
       </div>
-      <i class="details" data-icon="forward"></i>`;
+      <button class="install-button">Loading...</button>`;
     return string;
   }
 

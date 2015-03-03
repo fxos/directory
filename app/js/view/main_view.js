@@ -8,7 +8,8 @@ export default class MainView extends View {
       <gaia-header>
         <h1>Hackerplace</h1>
         <a id="upload-link" href="https://github.com/fxos/directory"></a>
-      </gaia-header>`;
+      </gaia-header>
+      <gaia-dialog-alert id="alert-dialog">Placeholder</gaia-dialog-alert>`;
     return string;
   }
 }
