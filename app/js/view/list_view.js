@@ -1,6 +1,5 @@
 import { View } from 'components/fxos-mvc/dist/mvc';
 import 'components/gaia-list/gaia-list';
-import 'components/gaia-button/gaia-button';
 
 function capitalize(string) {
   return string[0].toUpperCase() + string.slice(1);
@@ -66,7 +65,10 @@ export default class ListView extends View {
     item.innerHTML = this.listItemTemplate(data);
     this.el.appendChild(item);
 
-    item.addEventListener('click', function(data) {
+    item.addEventListener('click', function(data, evt) {
+      if (evt.target.classList.contains('install-button')) {
+        return;
+      }
       this.detailsHandlers.forEach(handler => {
         handler(data);
       });
@@ -85,7 +87,7 @@ export default class ListView extends View {
   updateElements(element, data) {
     var button = element.querySelector('.install-button');
     if (data.installed === true) {
-      button.textContent = 'Launch';
+      button.textContent = 'Open';
     } else {
       button.textContent = 'Install';
     }

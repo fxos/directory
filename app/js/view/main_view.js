@@ -1,6 +1,5 @@
 import { View } from 'components/fxos-mvc/dist/mvc';
 import 'components/gaia-header/dist/gaia-header';
-import 'components/gaia-dialog/gaia-dialog';
 import 'components/gaia-dialog/gaia-dialog-alert';
 
 export default class MainView extends View {

@@ -6,6 +6,7 @@ export default class ListModel extends Model {
       'http://fxos.github.io/sharing/dist/app/manifest.webapp': {
         manifestURL: 'http://fxos.github.io/sharing/dist/app/manifest.webapp',
         name: 'sharing',
+        description: 'Share applications with your friends over Wifi.',
         author: 'Doug Sherk',
         type: 'hosted',
         url: 'https://github.com/fxos/sharing',
@@ -14,6 +15,7 @@ export default class ListModel extends Model {
       'http://fxos.github.io/camera/dist/app/manifest.webapp': {
         manifestURL: 'http://fxos.github.io/camera/dist/app/manifest.webapp',
         name: 'camera',
+        description: 'Take pictures and stuff.',
         author: 'Justin D\'Arcangelo',
         type: 'hosted',
         url: 'https://github.com/fxos/camera',
@@ -22,6 +24,7 @@ export default class ListModel extends Model {
       'http://fxos.github.io/video/app/manifest.webapp': {
         manifestURL: 'http://fxos.github.io/video/app/manifest.webapp',
         name: 'video',
+        description: 'Become the next Steven Spielberg.',
         author: 'Justin D\'Arcangelo',
         type: 'hosted',
         url: 'https://github.com/fxos/video',
@@ -30,6 +33,7 @@ export default class ListModel extends Model {
       'http://fxos.github.io/dialer/dist/app/manifest.webapp': {
         manifestURL: 'http://fxos.github.io/dialer/dist/app/manifest.webapp',
         name: 'dialer',
+        description: 'A replacement for the built-in dialer app.',
         author: 'Doug Sherk',
         type: 'hosted',
         url: 'https://github.com/fxos/dialer',
@@ -38,6 +42,7 @@ export default class ListModel extends Model {
       'http://henretty.us/manifest.webapp': {
         manifestURL: 'http://henretty.us/manifest.webapp',
         name: 'clock',
+        description: 'A full featured clock app developed by the Gaia Team.',
         author: 'The Gaia Team',
         type: 'addon',
         url: 'https://github.com/mozilla-b2g/gaia/tree/apps/clock/',
@@ -46,3 +51,4 @@ export default class ListModel extends Model {
     };
   }
 }
+

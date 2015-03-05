@@ -7,6 +7,7 @@ import ListController from 'js/controller/list_controller';
 export default class MainController extends Controller {
 
 	constructor() {
+
 		this.view = new MainView({ el: document.body });
 		this.controllers = {
 			'list': new ListController()

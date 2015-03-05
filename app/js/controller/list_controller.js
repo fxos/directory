@@ -46,6 +46,7 @@ export default class ListController extends Controller {
       this.addonView.onDetails(this.handleDetails.bind(this));
       this.appView.activate();
       this.detailsView.onClose(this.handleCloseDetails.bind(this));
+      this.detailsView.onInstall(this.handleInstall.bind(this));
 
       this.alreadyCreated = true;
     }

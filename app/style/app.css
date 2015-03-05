@@ -59,12 +59,11 @@ gaia-header #upload-link {
 .install-list .install-button {
   float: right;
   color: rgba(0, 0, 0, 0.53);
-  background: none;
   font-size: 15px;
+  min-width: 40px !important;
+  border-radius: 20px;
   font-style: italic;
-  border: 2px solid rgba(0, 0, 0, 0.12);
-  min-width: 73px;
-  border-radius: 10px;
+  padding: 5px 8px;
 }
 
 #app-list {
@@ -80,16 +79,27 @@ gaia-header #upload-link {
   transform: translateX(0);
 }
 
-#add-details {
-  position: fixed:
-  height: 100%;
-  width: 100%;
+#app-details {
+  position: fixed;
+  z-index: 2;
+  background-color: white;
   top: 0;
+  bottom: 0;
   left: 0;
+  right: 0;
   transition: transform 0.2s ease;
-  transform: translatxY(100%);
+  transform: translateY(100%);
 }
 
 #app-details.active {
   transform: translateY(0);
+}
+
+#app-details #info-section {
+  position: relative !important;
+}
+
+#app-details #full-description {
+  font-size: 14px;
+  padding: 2px 22px;
 }
