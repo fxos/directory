@@ -104,7 +104,7 @@ export default class ListController extends Controller {
           revision: appData.revision
         }
       });
-    } else if (type === 'packaged') {
+    } else if (type === 'packaged' || type === 'addon') {
       console.log('installing packaged app, ', manifest);
       installReq = navigator.mozApps.installPackage(manifest, {
         installMetaData: {
