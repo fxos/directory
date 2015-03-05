@@ -1,4 +1,6 @@
 import { Controller } from 'components/fxos-mvc/dist/mvc';
+import 'gaia-component';
+import 'gaia-dialog';
 import MainView from 'js/view/main_view';
 import ListController from 'js/controller/list_controller';
 

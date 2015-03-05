@@ -4,6 +4,7 @@ import ListModel from 'js/model/list_model';
 import TabsView from 'js/view/tabs_view';
 import AppListView from 'js/view/app_list_view';
 import AddonListView from 'js/view/addon_list_view';
+import DetailsView from 'js/view/details_view';
 
 export default class ListController extends Controller {
   constructor() {
@@ -13,6 +14,7 @@ export default class ListController extends Controller {
     this.tabsView = new TabsView();
     this.appView = new AppListView();
     this.addonView = new AddonListView();
+    this.detailsView = new DetailsView();
 
     this.tabsView.onTabChange(this.handleTabChange.bind(this));
     document.addEventListener('visibilitychange',
@@ -20,25 +22,33 @@ export default class ListController extends Controller {
   }
 
   main() {
-    this.showList();
+    this.createListIfNeeded();
+    this.refreshInstalledList();
   }
 
-  showList() {
-    this.tabsView.render();
-    document.body.appendChild(this.tabsView.el);
-    this.appView.render();
-    document.body.appendChild(this.appView.el);
-    this.addonView.render();
-    document.body.appendChild(this.addonView.el);
+  createListIfNeeded() {
+    if (!this.alreadyCreated) {
+      this.tabsView.render();
+      document.body.appendChild(this.tabsView.el);
+      this.appView.render();
+      document.body.appendChild(this.appView.el);
+      this.addonView.render();
+      document.body.appendChild(this.addonView.el);
+      this.detailsView.render();
+      document.body.appendChild(this.detailsView.el);
 
-    this.list = this.model.getAppList();
-    this.appView.update(this.list);
-    this.addonView.update(this.list);
-    this.appView.onAppClick(this.handleAppClick.bind(this));
-    this.addonView.onAppClick(this.handleAppClick.bind(this));
+      this.list = this.model.getAppList();
+      this.appView.update(this.list);
+      this.addonView.update(this.list);
+      this.appView.onInstall(this.handleInstall.bind(this));
+      this.addonView.onInstall(this.handleInstall.bind(this));
+      this.appView.onDetails(this.handleDetails.bind(this));
+      this.addonView.onDetails(this.handleDetails.bind(this));
+      this.appView.activate();
+      this.detailsView.onClose(this.handleCloseDetails.bind(this));
 
-    this.refreshInstalledList();
-    this.appView.activate();
+      this.alreadyCreated = true;
+    }
   }
 
   refreshInstalledList() {
@@ -83,16 +93,25 @@ export default class ListController extends Controller {
     }
   }
 
-  handleAppClick(appData) {
-    var manifestURL = appData.manifestURL;
+  handleInstall(data) {
+    var manifestURL = data.manifestURL;
     if (this.list[manifestURL].mozApp) {
       this.list[manifestURL].mozApp.launch();
     } else {
-      this.installApp(appData);
+      this.install(data);
     }
   }
 
-  installApp(appData) {
+  handleDetails(data) {
+    this.detailsView.show(data);
+  }
+
+  handleCloseDetails() {
+    this.detailsView.hide();
+    this.refreshInstalledList();
+  }
+
+  install(appData) {
     var manifest = appData.manifestURL;
     var type = appData.type;
     var installReq;

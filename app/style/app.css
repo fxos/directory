@@ -79,3 +79,17 @@ gaia-header #upload-link {
 #addon-list.active {
   transform: translateX(0);
 }
+
+#add-details {
+  position: fixed:
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: transform 0.2s ease;
+  transform: translatxY(100%);
+}
+
+#app-details.active {
+  transform: translateY(0);
+}

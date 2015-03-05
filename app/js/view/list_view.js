@@ -1,7 +1,6 @@
 import { View } from 'components/fxos-mvc/dist/mvc';
 import 'components/gaia-list/gaia-list';
 import 'components/gaia-button/gaia-button';
-import 'components/gaia-dialog/gaia-dialog-alert';
 
 function capitalize(string) {
   return string[0].toUpperCase() + string.slice(1);
@@ -13,7 +12,8 @@ export default class ListView extends View {
     this.el.className = 'install-list';
 
     this.elements = Object.create(null);
-    this.clickHandlers = [];
+    this.installHandlers = [];
+    this.detailsHandlers = [];
   }
 
   showAlertDialog(msg) {
@@ -34,16 +34,29 @@ export default class ListView extends View {
     }
   }
 
-  onAppClick(handler) {
-    if (this.clickHandlers.indexOf(handler) === -1) {
-      this.clickHandlers.push(handler);
+  onInstall(handler) {
+    if (this.installHandlers.indexOf(handler) === -1) {
+      this.installHandlers.push(handler);
     }
   }
 
-  offAppClick(handler) {
-    var index = this.clickHandlers.indexOf(handler);
+  offInstall(handler) {
+    var index = this.installHandlers.indexOf(handler);
     if (index !== -1) {
-      this.clickHandlers.splice(index, 1);
+      this.installHandlers.splice(index, 1);
+    }
+  }
+
+  onDetails(handler) {
+    if (this.detailsHandlers.indexOf(handler) === -1) {
+      this.detailsHandlers.push(handler);
+    }
+  }
+
+  offDetails(handler) {
+    var index = this.detailsHandlers.indexOf(handler);
+    if (index !== -1) {
+      this.detailsHandlers.splice(index, 1);
     }
   }
 
@@ -53,9 +66,15 @@ export default class ListView extends View {
     item.innerHTML = this.listItemTemplate(data);
     this.el.appendChild(item);
 
+    item.addEventListener('click', function(data) {
+      this.detailsHandlers.forEach(handler => {
+        handler(data);
+      });
+    }.bind(this, data));
+
     item.querySelector('.install-button').addEventListener('click',
       function(data) {
-        this.clickHandlers.forEach(handler => {
+        this.installHandlers.forEach(handler => {
           handler(data);
         });
       }.bind(this, data));
