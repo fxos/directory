@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  font-size: 10px;
+  font-family: "FiraSans";
+  overflow-x: hidden;
+}
+
+body.loading {
+  background: url(../img/gears.svg) 50% 50%;
+}
+
+gaia-header #upload-link {
+  background: url(../img/upload.svg) no-repeat 50% 50% / 38px !important;
+  filter: invert(100%);
+}
+
+.install-list {
+  position: absolute !important;
+  width: 100%;
+}
+
+.install-list > .item {
+  height: 66px;
+}
+
+.install-list > .item::before {
+  display: none !important;
+}
+
+.install-list > .item:nth-child(even) {
+  background-color: #eaeaea !important;
+}
+
+.install-list .icon {
+  max-height: 100%;
+  float: left;
+  margin-right: 13px;
+}
+
+.install-list .description {
+  color: black !important;
+}
+
+.install-list .name {
+  font-size: 19px !important;
+  margin: 0;
+}
+
+.author {
+  font-size: 15px !important;
+  margin: 0 0 0 2px;
+  color: #545454 !important;
+}
+
+.install-list {
+  transition: transform 0.2s ease;
+}
+
+.install-list .install-button {
+  float: right;
+  color: rgba(0, 0, 0, 0.53);
+  font-size: 15px;
+  min-width: 40px !important;
+  border-radius: 20px;
+  font-style: italic;
+  padding: 5px 8px;
+}
+
+#app-list {
+  transform: translateX(-100%);
+}
+
+#addon-list {
+  transform: translateX(100%);
+}
+
+#app-list.active,
+#addon-list.active {
+  transform: translateX(0);
+}
+
+#app-details {
+  position: fixed;
+  z-index: 2;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: transform 0.2s ease;
+  transform: translateY(100%);
+}
+
+#app-details.active {
+  transform: translateY(0);
+}
+
+#app-details #info-section {
+  position: relative !important;
+}
+
+#app-details #full-description {
+  font-size: 14px;
+  padding: 2px 22px;
+}
