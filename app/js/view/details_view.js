@@ -49,6 +49,11 @@ export default class DetailsView extends View {
     this.el.classList.remove('active');
   }
 
+  isShowing(manifestURL) {
+    return this.el.classList.contains('active') &&
+      this.details.manifestURL === manifestURL;
+  }
+
   onClose(handler) {
     if (this.closeHandlers.indexOf(handler) === -1) {
       this.closeHandlers.push(handler);

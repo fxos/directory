@@ -73,6 +73,9 @@ export default class ListController extends Controller {
       for (let manifestURL in this.list) {
         this.list[manifestURL].installed = !!installedApps[manifestURL];
         this.list[manifestURL].mozApp = installedApps[manifestURL] || false;
+        if (this.detailsView.isShowing(manifestURL)) {
+          this.detailsView.show(this.list[manifestURL]);
+        }
       }
       this.appView.update(this.list);
       this.addonView.update(this.list);
