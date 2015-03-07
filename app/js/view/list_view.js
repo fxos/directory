@@ -15,14 +15,6 @@ export default class ListView extends View {
     this.detailsHandlers = [];
   }
 
-  showAlertDialog(msg) {
-    if (!this.alertDialog) {
-      this.alertDialog = document.querySelector('#alert-dialog');
-    }
-    this.alertDialog.textContent = msg;
-    this.alertDialog.open();
-  }
-
   update(list) {
     for (let manifestURL in list) {
       let data = list[manifestURL];
