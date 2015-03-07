@@ -10,7 +10,7 @@ body.loading {
 }
 
 gaia-header #upload-link {
-  background: url(../img/upload.svg) no-repeat 50% 50% / 38px !important;
+  background: url(../img/upload.svg) no-repeat 50% 50% / 32px !important;
   filter: invert(100%);
 }
 
