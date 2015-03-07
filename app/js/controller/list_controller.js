@@ -26,6 +26,14 @@ export default class ListController extends Controller {
     this.refreshInstalledList();
   }
 
+  showAlertDialog(msg) {
+    if (!this.alertDialog) {
+      this.alertDialog = document.querySelector('#alert-dialog');
+    }
+    this.alertDialog.textContent = msg;
+    this.alertDialog.open();
+  }
+
   createListIfNeeded() {
     if (!this.alreadyCreated) {
       this.tabsView.render();
@@ -79,7 +87,7 @@ export default class ListController extends Controller {
     };
 
     req.onerror = e => {
-      this.appView.showAlertDialog('error fetching install apps: ' + e.message);
+      this.showAlertDialog('error fetching install apps: ' + e.message);
       console.log('error fetching installed apps: ', e);
     };
   }
@@ -137,9 +145,22 @@ export default class ListController extends Controller {
     }
 
     installReq.onerror = (err) => {
-      this.appView.showAlertDialog('Error installing: ' + err.target.error.name);
-      console.log('install error', err);
+      var errorType = err.target.error.name;
+      switch(errorType) {
+        case 'DENIED':
+          // If the user cancelled the install, we do nothing.
+          break;
+
+        case 'NETWORK_ERROR':
+          this.showAlertDialog('Install Error: No network');
+          break;
+
+        default:
+          this.showAlertDialog('Error installing: ' + err.target.error.name);
+          break;
+      }
     };
+
     installReq.onsuccess = () => {
       this.refreshInstalledList();
     };
