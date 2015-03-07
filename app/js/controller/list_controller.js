@@ -74,6 +74,7 @@ export default class ListController extends Controller {
         this.list[manifestURL].installed = !!installedApps[manifestURL];
         this.list[manifestURL].mozApp = installedApps[manifestURL] || false;
         if (this.detailsView.isShowing(manifestURL)) {
+          // If it's showing, repopulate the details view with new app data.
           this.detailsView.show(this.list[manifestURL]);
         }
       }
