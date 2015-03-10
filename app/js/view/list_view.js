@@ -1,3 +1,5 @@
+/* globals DEFAULT_ICON_URL */
+
 import { View } from 'components/fxos-mvc/dist/mvc';
 import 'components/gaia-list/gaia-list';
 
@@ -51,10 +53,20 @@ export default class ListView extends View {
     }
   }
 
+  populateIcon(icon, src) {
+    icon.src = src || DEFAULT_ICON_URL;
+    icon.onerror = (e) => {
+      console.warn('Warning, failed to load icon url', e);
+      icon.src = DEFAULT_ICON_URL;
+    };
+  }
+
+
   addElement(data) {
     var item = document.createElement('li');
     item.className = 'item';
     item.innerHTML = this.listItemTemplate(data);
+    this.populateIcon(item.querySelector('.icon'), data.icon);
     this.el.appendChild(item);
 
     item.addEventListener('click', function(data, evt) {
@@ -83,6 +95,10 @@ export default class ListView extends View {
     } else {
       button.textContent = 'Install';
     }
+    var icon = element.querySelector('.icon');
+    if (data.icon && icon.src !== data.icon) {
+      this.populateIcon(icon, data.icon);
+    }
   }
 
   activate() {
@@ -95,7 +111,7 @@ export default class ListView extends View {
 
   listItemTemplate({ name, author }) {
     var string = `
-      <img class="icon" src="./img/app_icons/${name}.png" />
+      <img class="icon" />
       <div flex class="description">
         <p class="name">${capitalize(name)}</p>
         <p class="author">${author}</p>
