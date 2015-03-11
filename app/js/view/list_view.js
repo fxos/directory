@@ -1,5 +1,6 @@
 import { View } from 'components/fxos-mvc/dist/mvc';
 import 'components/gaia-list/gaia-list';
+import IconHelper from 'js/lib/icon_helper';
 
 function capitalize(string) {
   return string[0].toUpperCase() + string.slice(1);
@@ -55,6 +56,7 @@ export default class ListView extends View {
     var item = document.createElement('li');
     item.className = 'item';
     item.innerHTML = this.listItemTemplate(data);
+    IconHelper.setImage(item.querySelector('.icon'), data.icon);
     this.el.appendChild(item);
 
     item.addEventListener('click', function(data, evt) {
@@ -83,6 +85,10 @@ export default class ListView extends View {
     } else {
       button.textContent = 'Install';
     }
+    var icon = element.querySelector('.icon');
+    if (data.icon && icon.src !== data.icon) {
+      IconHelper.setImage(icon, data.icon);
+    }
   }
 
   activate() {
@@ -95,7 +101,7 @@ export default class ListView extends View {
 
   listItemTemplate({ name, author }) {
     var string = `
-      <img class="icon" src="./img/app_icons/${name}.png" />
+      <img class="icon" />
       <div flex class="description">
         <p class="name">${capitalize(name)}</p>
         <p class="author">${author}</p>

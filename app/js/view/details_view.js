@@ -1,5 +1,6 @@
 import { View } from 'components/fxos-mvc/dist/mvc';
 import 'components/gaia-header/dist/gaia-header';
+import IconHelper from 'js/lib/icon_helper';
 
 function capitalize(string) {
   return string[0].toUpperCase() + string.slice(1);
@@ -37,7 +38,7 @@ export default class DetailsView extends View {
   show(details) {
     this.details = details;
     this.titleElement.textContent = capitalize(details.name);
-    this.iconElement.src = `./img/app_icons/${details.name}.png`;
+    IconHelper.setImage(this.iconElement, details.icon);
     this.nameElement.textContent = capitalize(details.name);
     this.authorElement.textContent = details.author;
     this.installButton.textContent = details.installed ? 'Open' : 'Install';
@@ -74,7 +75,7 @@ export default class DetailsView extends View {
       </gaia-header>
       <gaia-list id="info-section" class="install-list">
         <li class="item">
-          <img class="icon" src="./img/app_icons/${name}.png" />
+          <img class="icon" />
           <div flex class="description">
             <p class="name"></p>
             <p class="author"></p>

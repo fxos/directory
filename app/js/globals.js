@@ -1,4 +1,5 @@
 window.COMPONENTS_BASE_URL = './components/';
+window.DEFAULT_ICON_URL = './img/default_icon.png';
 require.config({
   baseUrl: '/',
   paths: {
