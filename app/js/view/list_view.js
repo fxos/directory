@@ -1,7 +1,6 @@
-/* globals DEFAULT_ICON_URL */
-
 import { View } from 'components/fxos-mvc/dist/mvc';
 import 'components/gaia-list/gaia-list';
+import IconHelper from 'js/lib/icon_helper';
 
 function capitalize(string) {
   return string[0].toUpperCase() + string.slice(1);
@@ -53,20 +52,11 @@ export default class ListView extends View {
     }
   }
 
-  populateIcon(icon, src) {
-    icon.src = src || DEFAULT_ICON_URL;
-    icon.onerror = (e) => {
-      console.warn('Warning, failed to load icon url', e);
-      icon.src = DEFAULT_ICON_URL;
-    };
-  }
-
-
   addElement(data) {
     var item = document.createElement('li');
     item.className = 'item';
     item.innerHTML = this.listItemTemplate(data);
-    this.populateIcon(item.querySelector('.icon'), data.icon);
+    IconHelper.setImage(item.querySelector('.icon'), data.icon);
     this.el.appendChild(item);
 
     item.addEventListener('click', function(data, evt) {
@@ -97,7 +87,7 @@ export default class ListView extends View {
     }
     var icon = element.querySelector('.icon');
     if (data.icon && icon.src !== data.icon) {
-      this.populateIcon(icon, data.icon);
+      IconHelper.setImage(icon, data.icon);
     }
   }
 

@@ -1,7 +1,6 @@
-/* globals DEFAULT_ICON_URL */
-
 import { View } from 'components/fxos-mvc/dist/mvc';
 import 'components/gaia-header/dist/gaia-header';
+import IconHelper from 'js/lib/icon_helper';
 
 function capitalize(string) {
   return string[0].toUpperCase() + string.slice(1);
@@ -39,10 +38,7 @@ export default class DetailsView extends View {
   show(details) {
     this.details = details;
     this.titleElement.textContent = capitalize(details.name);
-    this.iconElement.src = details.icon || DEFAULT_ICON_URL;
-    this.iconElement.onerror = () => {
-      this.iconElement.src = DEFAULT_ICON_URL;
-    };
+    IconHelper.setImage(this.iconElement, details.icon);
     this.nameElement.textContent = capitalize(details.name);
     this.authorElement.textContent = details.author;
     this.installButton.textContent = details.installed ? 'Open' : 'Install';
