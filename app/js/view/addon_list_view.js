@@ -18,7 +18,7 @@ export default class AddonListView extends ListView {
 
   updateElement(element, data) {
     var button = element.querySelector('.install-button');
-    if (data.installed === true) {
+    if (data.installed) {
       button.textContent = 'Installed';
       button.disabled = true;
     } else {

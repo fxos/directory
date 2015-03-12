@@ -80,7 +80,7 @@ export default class ListView extends View {
 
   updateElement(element, data) {
     var button = element.querySelector('.install-button');
-    if (data.installed === true) {
+    if (data.installed) {
       button.textContent = 'Open';
     } else {
       button.textContent = 'Install';

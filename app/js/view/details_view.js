@@ -41,9 +41,17 @@ export default class DetailsView extends View {
 
   filterNonAffectedApps(apps, filters) {
     return apps.filter(app => {
-      return filters.reduce((prev, cur) => {
-        return prev || cur.test(app.manifestURL);
-      }, false);
+      return filters.find(filter => {
+        return filter.test(app.manifestURL);
+      });
+    });
+  }
+
+  dedupeAppNames(apps) {
+    return apps.map(app => {
+      return app.manifest.name;
+    }).filter((appName, index, appNames) => {
+      return appNames.indexOf(appName) === index;
     });
   }
 
@@ -51,16 +59,10 @@ export default class DetailsView extends View {
     Promise.all([
       AppsHelper.getAllApps(),
       ManifestHelper.getManifest(details.manifestURL)
-    ])
-
-    .then(results => {
+    ]).then(results => {
       var apps = results[0];
       var manifest = results[1];
       var filters = manifest.customizations.map(customization => {
-        if (!customization.filter) {
-          console.warn('No filter provided in customization', customization);
-          customization.filter = '';
-        }
         return new RegExp(customization.filter);
       });
 
@@ -72,15 +74,11 @@ export default class DetailsView extends View {
       if (apps.length === filteredApps.length) {
         affectedApps = 'All applications.';
       } else {
-        affectedApps = filteredApps.reduce((prev, cur) => {
-          return (prev ? prev + ', ' : '') + cur.manifest.name;
-        }, null);
+        affectedApps = this.dedupeAppNames(filteredApps).join(', ');
       }
 
       this.affectedApps.textContent = affectedApps || 'None';
-    })
-
-    .catch((err) => {
+    }).catch((err) => {
       console.warn('Could not populate affected apps', err);
       // Hide affected apps section when undetermined.
       this.addonSection.hidden = true;
