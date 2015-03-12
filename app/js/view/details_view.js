@@ -39,10 +39,22 @@ export default class DetailsView extends View {
     });
   }
 
-  filterNonAffectedApps(apps, filters) {
+  filterNonAffectedApps(apps, addonManifest) {
+    var filters = addonManifest.customizations.map(customization => {
+      return new RegExp(customization.filter);
+    });
+
     return apps.filter(app => {
+      // Make sure the addon has appropriate privs against the app.
+      if (!ManifestHelper.hasHigherPriviledges(addonManifest, app.manifest)) {
+        return false;
+      }
+      // Test the apps launch URL against each customization filter
+      // and mark the app as affected if it matches at least one.
+      var launchPath = app.manifest.launch_path || '';
+      var launchURL = new URL(launchPath, app.manifestURL).href;
       return filters.find(filter => {
-        return filter.test(app.manifestURL);
+        return filter.test(launchURL);
       });
     });
   }
@@ -61,23 +73,17 @@ export default class DetailsView extends View {
       ManifestHelper.getManifest(details.manifestURL)
     ]).then(results => {
       var apps = results[0];
-      var manifest = results[1];
-      var filters = manifest.customizations.map(customization => {
-        return new RegExp(customization.filter);
-      });
+      var addonManifest = results[1];
+      var filteredApps = this.filterNonAffectedApps(apps, addonManifest);
 
-      // Test the current manifest against each customization filter
-      // and mark the app as affected if it matches at least one.
-      var filteredApps = this.filterNonAffectedApps(apps, filters);
-
-      var affectedApps;
+      var affectedAppList;
       if (apps.length === filteredApps.length) {
-        affectedApps = 'All applications.';
+        affectedAppList = 'All applications.';
       } else {
-        affectedApps = this.dedupeAppNames(filteredApps).join(', ');
+        affectedAppList = this.dedupeAppNames(filteredApps).join(', ');
       }
+      this.affectedApps.textContent = affectedAppList || 'None';
 
-      this.affectedApps.textContent = affectedApps || 'None';
     }).catch((err) => {
       console.warn('Could not populate affected apps', err);
       // Hide affected apps section when undetermined.

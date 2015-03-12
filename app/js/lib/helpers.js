@@ -42,4 +42,10 @@ export class ManifestHelper {
       req.send();
     });
   }
+
+  static hasHigherPriviledges(manifest1, manifest2) {
+    return manifest1.type === manifest2.type ||
+      manifest1.type === 'certified' ||
+      (manifest1.type === 'privileged' && manifest2.type !== 'certified');
+  }
 }
