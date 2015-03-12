@@ -43,15 +43,14 @@ export default class ListModel extends Model {
         url: 'https://github.com/fxos/dialer',
         revision: '835af6ccf608a51bc87711d1c40fc4f33a1fc12b'
       },
-      'http://henretty.us/manifest.webapp': {
-        manifestURL: 'http://henretty.us/manifest.webapp',
-        name: 'clock',
-        icon: './img/app_icons/clock.png',
-        description: 'A full featured clock app developed by the Gaia Team.',
+      'http://fxos.github.io/customizer/app/manifest.webapp': {
+        manifestURL: 'http://fxos.github.io/customizer/app/manifest.webapp',
+        name: 'customizer',
+        description: 'An addon for FirefoxOS which builds customizes application interfaces.',
         author: 'The Gaia Team',
         type: 'addon',
-        url: 'https://github.com/mozilla-b2g/gaia/tree/apps/clock/',
-        revision: '5f0dd37917c4a6d8fa8724715d4d3797419f9013'
+        url: 'https://github.com/fxos/customizer',
+        revision: '71d6d9f227d9104c973c813537661ed8bdf291db'
       }
     };
   }

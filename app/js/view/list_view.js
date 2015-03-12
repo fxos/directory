@@ -1,6 +1,6 @@
 import { View } from 'components/fxos-mvc/dist/mvc';
 import 'components/gaia-list/gaia-list';
-import IconHelper from 'js/lib/icon_helper';
+import { IconHelper } from 'js/lib/helpers';
 
 function capitalize(string) {
   return string[0].toUpperCase() + string.slice(1);
@@ -22,7 +22,7 @@ export default class ListView extends View {
       if (!this.elements[manifestURL]) {
         this.elements[manifestURL] = this.addElement(data);
       }
-      this.updateElements(this.elements[manifestURL], data);
+      this.updateElement(this.elements[manifestURL], data);
     }
   }
 
@@ -78,9 +78,9 @@ export default class ListView extends View {
     return item;
   }
 
-  updateElements(element, data) {
+  updateElement(element, data) {
     var button = element.querySelector('.install-button');
-    if (data.installed === true) {
+    if (data.installed) {
       button.textContent = 'Open';
     } else {
       button.textContent = 'Install';

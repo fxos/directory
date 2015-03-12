@@ -99,7 +99,8 @@ gaia-header #upload-link {
   position: relative !important;
 }
 
-#app-details #full-description {
+#app-details #full-description,
+#app-details #affected-apps {
   font-size: 14px;
   padding: 2px 22px;
 }
