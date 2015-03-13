@@ -1,5 +1,6 @@
 import { View } from 'components/fxos-mvc/dist/mvc';
 import 'components/gaia-list/gaia-list';
+import 'components/gaia-button/gaia-button';
 import { IconHelper } from 'js/lib/helpers';
 
 function capitalize(string) {
@@ -82,8 +83,10 @@ export default class ListView extends View {
     var button = element.querySelector('.install-button');
     if (data.installed) {
       button.textContent = 'Open';
+      button.classList.add('open');
     } else {
       button.textContent = 'Install';
+      button.classList.remove('open');
     }
     var icon = element.querySelector('.icon');
     if (data.icon && icon.src !== data.icon) {
@@ -106,7 +109,7 @@ export default class ListView extends View {
         <p class="name">${capitalize(name)}</p>
         <p class="author">${author}</p>
       </div>
-      <button class="install-button">Loading...</button>`;
+      <gaia-button class="install-button">Loading...</gaia-button>`;
     return string;
   }
 

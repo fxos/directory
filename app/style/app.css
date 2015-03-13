@@ -28,7 +28,7 @@ gaia-header #upload-link {
 }
 
 .install-list > .item:nth-child(even) {
-  background-color: #eaeaea !important;
+  background-color: var(--color-iota) !important;
 }
 
 .install-list .icon {
@@ -57,13 +57,18 @@ gaia-header #upload-link {
 }
 
 .install-list .install-button {
-  float: right;
-  color: rgba(0, 0, 0, 0.53);
-  font-size: 15px;
-  min-width: 40px !important;
-  border-radius: 20px;
-  font-style: italic;
-  padding: 5px 8px;
+  --button-background: var(--color-blue);
+  --button-background-active: var(--background);
+  --button-font-size: 12px;
+  --button-height: 30px;
+  min-width: 75px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.install-list .install-button.open {
+  --button-background: var(--color-theta);
+  --button-color: black;
 }
 
 #app-list {

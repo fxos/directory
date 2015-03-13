@@ -8,13 +8,13 @@
   ],
   "dependencies": {
     "fxos-mvc": "git@github.com:fxos/mvc.git",
-    "gaia-theme": "gaia-components/gaia-theme",
-    "gaia-header" : "gaia-components/gaia-header",
-    "gaia-list": "gaia-components/gaia-list",
-    "gaia-button": "gaia-components/gaia-button",
-    "gaia-fonts": "gaia-components/gaia-fonts",
-    "gaia-dialog": "gaia-components/gaia-dialog",
-    "gaia-tabs": "gaia-components/gaia-tabs",
-    "gaia-sub-header": "gaia-components/gaia-sub-header"
+    "gaia-theme": "gaia-components/gaia-theme#0.4.5",
+    "gaia-header" : "gaia-components/gaia-header#0.7.0",
+    "gaia-list": "gaia-components/gaia-list#0.1.7",
+    "gaia-button": "git@github.com:mikehenrty/gaia-button.git#height-font-vars",
+    "gaia-fonts": "gaia-components/gaia-fonts#0.2.1",
+    "gaia-dialog": "gaia-components/gaia-dialog#c7f52d095c59b4f99e34b5b9316882c2011d97a8",
+    "gaia-tabs": "gaia-components/gaia-tabs#0.0.1",
+    "gaia-sub-header": "gaia-components/gaia-sub-header#0.3.1"
   }
 }
