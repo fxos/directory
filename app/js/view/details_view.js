@@ -1,6 +1,7 @@
 import { View } from 'components/fxos-mvc/dist/mvc';
 import 'components/gaia-header/dist/gaia-header';
 import 'components/gaia-sub-header/gaia-sub-header';
+import 'components/gaia-button/gaia-button';
 import { IconHelper, AppsHelper, ManifestHelper } from 'js/lib/helpers';
 
 function capitalize(string) {
@@ -99,6 +100,7 @@ export default class DetailsView extends View {
     this.authorElement.textContent = details.author;
     this.fullDescription.textContent = details.description;
     this.installButton.textContent = details.installed ? 'Open' : 'Install';
+    this.installButton.classList.toggle('open', details.installed);
     this.installButton.disabled = false;
     this.addonSection.hidden = true;
 
@@ -149,7 +151,7 @@ export default class DetailsView extends View {
             <p class="name"></p>
             <p class="author"></p>
           </div>
-          <button class="install-button"></button>
+          <gaia-button class="install-button"></gaia-button>
         </li>
       </gaia-list>
       <p id="full-description"></p>

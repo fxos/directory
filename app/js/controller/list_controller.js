@@ -107,7 +107,10 @@ export default class ListController extends Controller {
   handleInstall(data) {
     var manifestURL = data.manifestURL;
     if (this.list[manifestURL].mozApp) {
-      this.list[manifestURL].mozApp.launch();
+      // Addons cannot be launched so do nothing on button click.
+      if (data.type !== 'addon') {
+        this.list[manifestURL].mozApp.launch();
+      }
     } else {
       this.install(data);
     }
