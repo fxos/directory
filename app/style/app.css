@@ -70,13 +70,11 @@ gaia-header #upload-link {
 
 .install-list .install-button {
   font-size: 12px !important;
-  font-weight: bold !important;
-  height: 32px !important;
-  min-width: 70px !important;
+  height: 30px !important;
+  min-width: 75px !important;
   padding: 0 !important;
   margin: 0 !important;
   --button-color: var(--title-color);
-  -moz-user-select: none;
 }
 
 .install-list .addon.installed .install-button {

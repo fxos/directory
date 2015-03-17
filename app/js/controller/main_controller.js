@@ -8,21 +8,28 @@ import { ActivityHelper } from 'js/lib/helpers';
 
 export default class MainController extends RoutingController {
 
-	constructor() {
-		this.view = new MainView({ el: document.body });
-		this.activityHelper = new ActivityHelper();
-		this.listController = new ListController();
-		super({
-			apps: this.listController,
-			addons: this.listController
-		});
-	}
+  constructor() {
+    this.view = new MainView({ el: document.body });
+    this.activityHelper = new ActivityHelper();
+    this.listController = new ListController();
+    super({
+      apps: this.listController,
+      addons: this.listController
+    });
+  }
 
-	main() {
-		this.activityHelper.ready.then(route => {
-			this.view.render(this.activityHelper.isActivity);
-			window.location.hash = '#' + route;
-			document.body.classList.remove('loading');
-		});
-	}
+  main() {
+    this.activityHelper.ready.then(route => {
+      document.body.classList.remove('loading');
+      this.view.render(this.activityHelper.isActivity);
+
+      // If current hash does not match current route, change the hash
+      // to invoke routing function, otherwise invoke route explicitly.
+      if (window.location.hash.slice(1) !== route) {
+        window.location.hash = '#' + route;
+      } else {
+        this.route();
+      }
+    });
+  }
 }
