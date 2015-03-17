@@ -83,10 +83,10 @@ export default class ListView extends View {
     var button = element.querySelector('.install-button');
     if (data.installed) {
       button.textContent = 'Open';
-      button.classList.add('open');
+      button.classList.add('installed');
     } else {
       button.textContent = 'Install';
-      button.classList.remove('open');
+      button.classList.remove('installed');
     }
     var icon = element.querySelector('.icon');
     if (data.icon && icon.src !== data.icon) {
