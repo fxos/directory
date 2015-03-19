@@ -33,7 +33,7 @@ export default class TabsView extends View {
   template() {
     var string = `
       <gaia-tabs>
-        <a select>Apps</a>
+        <a class="selected">Apps</a>
         <a>Add-Ons</a>
       </gaia-tabs>`;
     return string;

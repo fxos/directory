@@ -3,6 +3,8 @@ body {
   font-size: 20px;
   font-family: "FiraSans";
   overflow-x: hidden;
+  background-color: var(--background);
+  color: var(--title-color);
 }
 
 body.loading {
@@ -11,7 +13,15 @@ body.loading {
 
 gaia-header #upload-link {
   background: url(../img/upload.svg) no-repeat 50% 50% / 32px !important;
-  filter: invert(100%);
+  filter: invert(55%);
+}
+
+#tabs-container {
+  --border-color: transparent;
+}
+
+#tabs-container a {
+  font-weight: normal !important;
 }
 
 .install-list {
@@ -23,33 +33,22 @@ gaia-header #upload-link {
   height: 66px;
 }
 
-.install-list > .item::before {
-  display: none !important;
-}
-
-.install-list > .item:nth-child(even) {
-  background-color: var(--color-iota) !important;
-}
-
 .install-list .icon {
   max-height: 100%;
   float: left;
   margin-right: 13px;
 }
 
-.install-list .description {
-  color: black !important;
-}
-
 .install-list .name {
-  font-size: 19px !important;
   margin: 0;
+  font-size: 19px !important;
+  color: var(--text-color);
 }
 
 .author {
-  font-size: 15px !important;
   margin: 0 0 0 2px;
-  color: #545454 !important;
+  font-size: 15px !important;
+  color: var(--title-color);
 }
 
 .install-list {
@@ -57,18 +56,22 @@ gaia-header #upload-link {
 }
 
 .install-list .install-button {
-  --button-background: var(--color-blue);
-  --button-background-active: var(--background);
-  --button-font-size: 12px;
-  --button-height: 30px;
-  min-width: 75px !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  height: 32px !important;
+  min-width: 70px !important;
   padding: 0 !important;
   margin: 0 !important;
+  --button-color: var(--title-color);
 }
 
-.install-list .install-button.installed {
-  --button-background: var(--color-theta);
-  --button-color: black;
+.install-list .install-button:not(.installed) {
+  --button-background: var(--color-blue);
+  --button-box-shadow: none;
+  --button-color: white;
+  --button-background-active: white;
+  --button-box-shadow-active: none;
+  --button-color-active: var(--title-color);
 }
 
 #app-list {
