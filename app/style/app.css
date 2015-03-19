@@ -4,6 +4,7 @@ body {
   font-family: "FiraSans";
   overflow-x: hidden;
   background-color: var(--background);
+  color: var(--title-color);
 }
 
 body.loading {
@@ -21,10 +22,6 @@ gaia-header #upload-link {
 
 #tabs-container a {
   font-weight: normal !important;
-}
-
-#tabs-container a:not(.selected) {
-  color: var(--text-color) !important;
 }
 
 .install-list {
@@ -45,12 +42,13 @@ gaia-header #upload-link {
 .install-list .name {
   margin: 0;
   font-size: 19px !important;
-  color: #4d4d4d;
+  color: var(--text-color);
 }
 
 .author {
-  font-size: 15px !important;
   margin: 0 0 0 2px;
+  font-size: 15px !important;
+  color: var(--title-color);
 }
 
 .install-list {
@@ -64,6 +62,7 @@ gaia-header #upload-link {
   min-width: 70px !important;
   padding: 0 !important;
   margin: 0 !important;
+  --button-color: var(--title-color);
 }
 
 .install-list .install-button:not(.installed) {
@@ -72,7 +71,7 @@ gaia-header #upload-link {
   --button-color: white;
   --button-background-active: white;
   --button-box-shadow-active: none;
-  --button-color-active: var(--text-color);
+  --button-color-active: var(--title-color);
 }
 
 #app-list {
