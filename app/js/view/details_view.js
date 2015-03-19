@@ -100,7 +100,7 @@ export default class DetailsView extends View {
     this.authorElement.textContent = details.author;
     this.fullDescription.textContent = details.description;
     this.installButton.textContent = details.installed ? 'Open' : 'Install';
-    this.installButton.classList.toggle('open', details.installed);
+    this.installButton.classList.toggle('installed', details.installed);
     this.installButton.disabled = false;
     this.addonSection.hidden = true;
 
