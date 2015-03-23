@@ -11,6 +11,10 @@ body.loading {
   background: url(../img/gears.svg) 50% 50%;
 }
 
+gaia-header {
+  --header-icon-color: var(--title-color);
+}
+
 gaia-header #upload-link {
   background: url(../img/upload.svg) no-repeat 50% 50% / 32px !important;
   filter: invert(55%);
@@ -18,6 +22,7 @@ gaia-header #upload-link {
 
 #tabs-container {
   --border-color: transparent;
+  border-bottom: 1px solid #e7e7e7 !important;
 }
 
 #tabs-container a {
@@ -63,15 +68,31 @@ gaia-header #upload-link {
   padding: 0 !important;
   margin: 0 !important;
   --button-color: var(--title-color);
+  -moz-user-select: none;
 }
 
-.install-list .install-button:not(.installed) {
+.install-list .addon.installed .install-button {
+  display: none !important;
+}
+
+.install-list .item:not(.installed) .install-button {
   --button-background: var(--color-blue);
   --button-box-shadow: none;
   --button-color: white;
   --button-background-active: white;
   --button-box-shadow-active: none;
   --button-color-active: var(--title-color);
+}
+
+.install-list .install-info {
+  font-size: 14px;
+  font-style: italic;
+  color: var(--title-color);
+  display: none;
+}
+
+.install-list .addon.installed .install-info {
+  display: inline;
 }
 
 #app-list {
@@ -111,6 +132,7 @@ gaia-header #upload-link {
 
 #app-details #full-description,
 #app-details #affected-apps {
-  font-size: 14px;
+  font-size: 15px;
+  line-height: 20px;
   padding: 2px 16px;
 }
