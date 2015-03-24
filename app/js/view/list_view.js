@@ -55,7 +55,7 @@ export default class ListView extends View {
 
   addElement(data) {
     var item = document.createElement('li');
-    item.className = 'item';
+    item.classList.add('item', data.type);
     item.innerHTML = this.listItemTemplate(data);
     IconHelper.setImage(item.querySelector('.icon'), data.icon);
     this.el.appendChild(item);
@@ -80,14 +80,9 @@ export default class ListView extends View {
   }
 
   updateElement(element, data) {
+    element.classList.toggle('installed', data.installed);
     var button = element.querySelector('.install-button');
-    if (data.installed) {
-      button.textContent = 'Open';
-      button.classList.add('installed');
-    } else {
-      button.textContent = 'Install';
-      button.classList.remove('installed');
-    }
+    button.textContent = data.installed ? 'Open' : 'Install';
     var icon = element.querySelector('.icon');
     if (data.icon && icon.src !== data.icon) {
       IconHelper.setImage(icon, data.icon);
@@ -109,6 +104,7 @@ export default class ListView extends View {
         <p class="name">${capitalize(name)}</p>
         <p class="author">${author}</p>
       </div>
+      <span class="install-info">Installed</span>
       <gaia-button class="install-button">Loading...</gaia-button>`;
     return string;
   }

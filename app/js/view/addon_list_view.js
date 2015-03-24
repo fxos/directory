@@ -15,16 +15,4 @@ export default class AddonListView extends ListView {
     }
     super(addonList);
   }
-
-  updateElement(element, data) {
-    var button = element.querySelector('.install-button');
-    if (data.installed) {
-      button.textContent = 'Installed';
-      button.classList.add('installed');
-      button.disabled = true;
-    } else {
-      button.textContent = 'Install';
-      button.classList.remove('installed');
-    }
-  }
 }

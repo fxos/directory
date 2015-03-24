@@ -19,6 +19,7 @@ export default class DetailsView extends View {
   render() {
     super();
     this.titleElement = this.el.querySelector('#details-title');
+    this.itemElement = this.el.querySelector('.item');
     this.nameElement = this.el.querySelector('.name');
     this.iconElement = this.el.querySelector('.icon');
     this.authorElement = this.el.querySelector('.author');
@@ -94,6 +95,8 @@ export default class DetailsView extends View {
 
   show(details) {
     this.details = details;
+    this.itemElement.classList.toggle('installed', details.installed);
+    this.itemElement.classList.toggle('addon', (details.type === 'addon'));
     this.titleElement.textContent = capitalize(details.name);
     IconHelper.setImage(this.iconElement, details.icon);
     this.nameElement.textContent = capitalize(details.name);
@@ -151,6 +154,7 @@ export default class DetailsView extends View {
             <p class="name"></p>
             <p class="author"></p>
           </div>
+          <span class="install-info">Installed</span>
           <gaia-button class="install-button"></gaia-button>
         </li>
       </gaia-list>
