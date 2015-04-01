@@ -7,7 +7,7 @@
     "app/componenets"
   ],
   "dependencies": {
-    "fxos-mvc": "git@github.com:fxos/mvc.git",
+    "fxos-mvc": "fxos/mvc",
     "gaia-theme": "gaia-components/gaia-theme#0.4.5",
     "gaia-header" : "gaia-components/gaia-header#0.7.0",
     "gaia-list": "gaia-components/gaia-list#0.1.7",
