@@ -22,7 +22,13 @@ export default class ListController extends Controller {
   }
 
   main() {
-    this.createListIfNeeded();
+    let hash = window.location.hash;
+    let tab = hash && hash.slice(1);
+
+    if (!this.alreadyCreated) {
+      this.createList(tab);
+    }
+    this.activateTab(tab);
     this.refreshInstalledList();
   }
 
@@ -31,31 +37,28 @@ export default class ListController extends Controller {
     this.alertDialog.open();
   }
 
-  createListIfNeeded() {
-    if (!this.alreadyCreated) {
-      this.tabsView.render();
-      document.body.appendChild(this.tabsView.el);
-      this.appView.render();
-      document.body.appendChild(this.appView.el);
-      this.addonView.render();
-      document.body.appendChild(this.addonView.el);
-      this.detailsView.render();
-      document.body.appendChild(this.detailsView.el);
-      this.alertDialog = document.querySelector('#alert-dialog');
+  createList(tab) {
+    this.tabsView.render(tab);
+    document.body.appendChild(this.tabsView.el);
+    this.appView.render();
+    document.body.appendChild(this.appView.el);
+    this.addonView.render();
+    document.body.appendChild(this.addonView.el);
+    this.detailsView.render();
+    document.body.appendChild(this.detailsView.el);
+    this.alertDialog = document.querySelector('#alert-dialog');
 
-      this.list = this.model.getAppList();
-      this.appView.update(this.list);
-      this.addonView.update(this.list);
-      this.appView.onInstall(this.handleInstall.bind(this));
-      this.addonView.onInstall(this.handleInstall.bind(this));
-      this.appView.onDetails(this.handleDetails.bind(this));
-      this.addonView.onDetails(this.handleDetails.bind(this));
-      this.appView.activate();
-      this.detailsView.onClose(this.handleCloseDetails.bind(this));
-      this.detailsView.onInstall(this.handleInstall.bind(this));
+    this.list = this.model.getAppList();
+    this.appView.update(this.list);
+    this.addonView.update(this.list);
+    this.appView.onInstall(this.handleInstall.bind(this));
+    this.addonView.onInstall(this.handleInstall.bind(this));
+    this.appView.onDetails(this.handleDetails.bind(this));
+    this.addonView.onDetails(this.handleDetails.bind(this));
+    this.detailsView.onClose(this.handleCloseDetails.bind(this));
+    this.detailsView.onInstall(this.handleInstall.bind(this));
 
-      this.alreadyCreated = true;
-    }
+    this.alreadyCreated = true;
   }
 
   refreshInstalledList() {
@@ -95,7 +98,11 @@ export default class ListController extends Controller {
   }
 
   handleTabChange(activeTab) {
-    if (activeTab === 'Apps') {
+    window.location.hash = '#' + activeTab;
+  }
+
+  activateTab(activeTab) {
+    if (activeTab === 'apps') {
       this.appView.activate();
       this.addonView.deactivate();
     } else {

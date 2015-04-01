@@ -49,3 +49,33 @@ export class ManifestHelper {
       (manifest1.type === 'privileged' && manifest2.type !== 'certified');
   }
 }
+
+export class ActivityHelper {
+  constructor() {
+    this.ready = new Promise((resolve, reject) => {
+      if (navigator.mozHasPendingMessage('activity')) {
+        navigator.mozSetMessageHandler('activity', activity => {
+          let activitySource = activity.source;
+
+          if (activitySource.name !== 'install') {
+            activity.postError('Unsupported activity');
+            return;
+          }
+
+          this.isActivity = true;
+          window.addEventListener('request-activity-finish', () => {
+            activity.postResult('finished');
+          });
+          resolve(this.getRoute(activitySource.data.type));
+        });
+      } else {
+        let hash = window.location.hash;
+        resolve(this.getRoute(hash && hash.slice(1)));
+      }
+    });
+  }
+
+  getRoute(type) {
+    return type || 'apps';
+  }
+}

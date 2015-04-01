@@ -6,6 +6,7 @@ export default class TabsView extends View {
     this.el = document.createElement('div');
     this.el.id = 'tabs-container';
     this.changeHandlers = [];
+    this.tabList = ['apps', 'addons'];
   }
 
   onTabChange(handler) {
@@ -15,14 +16,14 @@ export default class TabsView extends View {
   }
 
   onChange(evt) {
-    var selected = this.tabs.selected === 0 ? 'Apps' : 'Add-ons';
+    let selected = this.tabList[this.tabs.selected];
     this.changeHandlers.forEach(handler => {
       handler(selected);
     });
   }
 
-  render() {
-    super();
+  render(initialTab) {
+    super([this.tabList.indexOf(initialTab)]);
     // We can't create gaia-tabs with document.createElement
     // so we need to put gaia-tabs in template, and add event listeners
     // here, see https://github.com/gaia-components/gaia-tabs/issues/4
@@ -30,10 +31,10 @@ export default class TabsView extends View {
     this.tabs.addEventListener('change', this.onChange.bind(this));
   }
 
-  template() {
+  template(selected) {
     var string = `
-      <gaia-tabs>
-        <a class="selected">Apps</a>
+      <gaia-tabs selected="${selected}">
+        <a>Apps</a>
         <a>Add-Ons</a>
       </gaia-tabs>`;
     return string;

@@ -3,9 +3,24 @@ import 'components/gaia-header/dist/gaia-header';
 import 'components/gaia-dialog/gaia-dialog-alert';
 
 export default class MainView extends View {
-  template() {
+
+  render(isActivity) {
+    super([isActivity]);
+
+    if (isActivity) {
+      this.el.querySelector('gaia-header').addEventListener('action', event => {
+        if (event.detail.type === 'back') {
+          // Back from activity should close it via ActivityHelper.
+          window.dispatchEvent(new CustomEvent('request-activity-finish'));
+        }
+      });
+    }
+  }
+
+  template(isActivity) {
+    var action = isActivity ? 'action="back"' : '';
     var string = `
-      <gaia-header>
+      <gaia-header ${action}>
         <h1>Hackerplace</h1>
         <a id="upload-link" target="_blank"
            href="https://github.com/fxos/directory#submission-process"></a>
