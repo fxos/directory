@@ -12,12 +12,15 @@ body.loading {
 }
 
 gaia-header {
-  --header-icon-color: var(--title-color);
+  --header-background: #9ab0c0;
+  --header-icon-color: #ffffff;
+  --header-title-color: #ffffff;
+
 }
 
 gaia-header #upload-link {
   background: url(../img/upload.svg) no-repeat 50% 50% / 32px !important;
-  filter: invert(55%);
+  filter: invert(100%);
 }
 
 #tabs-container {
@@ -51,13 +54,17 @@ gaia-header #upload-link {
 }
 
 .author {
-  margin: 0 0 0 2px;
+  margin: 0;
   font-size: 15px !important;
   color: var(--title-color);
 }
 
 .install-list {
   transition: transform 0.2s ease;
+}
+
+.install-list .item {
+  height: 70px;
 }
 
 .install-list .install-button {
@@ -127,6 +134,7 @@ gaia-header #upload-link {
 }
 
 #app-details #info-section {
+  margin-top: 14px;
   position: relative !important;
 }
 
