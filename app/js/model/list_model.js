@@ -16,7 +16,6 @@ export default class ListModel extends Model {
       'http://fxos.github.io/camera/dist/app/manifest.webapp': {
         manifestURL: 'http://fxos.github.io/camera/dist/app/manifest.webapp',
         name: 'camera',
-        icon: 'https://raw.githubusercontent.com/fxos/camera/master/app/icons/icon_128.png',
         description: 'Take pictures and stuff.',
         author: 'Justin D\'Arcangelo',
         type: 'hosted',
@@ -26,7 +25,6 @@ export default class ListModel extends Model {
       'http://fxos.github.io/video/app/manifest.webapp': {
         manifestURL: 'http://fxos.github.io/video/app/manifest.webapp',
         name: 'video',
-        icon: 'https://raw.githubusercontent.com/fxos/video/master/app/icons/icon_128.png',
         description: 'Become the next Steven Spielberg.',
         author: 'Justin D\'Arcangelo',
         type: 'hosted',
@@ -36,7 +34,6 @@ export default class ListModel extends Model {
       'http://fxos.github.io/dialer/dist/app/manifest.webapp': {
         manifestURL: 'http://fxos.github.io/dialer/dist/app/manifest.webapp',
         name: 'dialer',
-        icon: 'https://raw.githubusercontent.com/fxos/dialer/master/app/icons/icon_128.png',
         description: 'A replacement for the built-in dialer app.',
         author: 'Doug Sherk',
         type: 'hosted',
