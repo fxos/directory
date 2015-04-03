@@ -47,6 +47,10 @@ export default class DetailsView extends View {
     });
 
     return apps.filter(app => {
+      if (!app.manifest) {
+        console.log('Could not filter app, manifest not found', app.name);
+        return false;
+      }
       // Make sure the addon has appropriate privs against the app.
       if (!ManifestHelper.hasHigherPriviledges(addonManifest, app.manifest)) {
         return false;

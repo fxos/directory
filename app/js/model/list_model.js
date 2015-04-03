@@ -6,7 +6,6 @@ export default class ListModel extends Model {
       'http://fxos.github.io/sharing/dist/app/manifest.webapp': {
         manifestURL: 'http://fxos.github.io/sharing/dist/app/manifest.webapp',
         name: 'sharing',
-        icon: 'https://raw.githubusercontent.com/fxos/sharing/master/app/icons/Icon_P2P_Sharing.png',
         description: 'Share applications with your friends over Wifi.',
         author: 'Doug Sherk',
         type: 'hosted',
