@@ -29,7 +29,6 @@ export default class ListController extends Controller {
       this.createList(tab);
     }
     this.activateTab(tab);
-    this.refreshInstalledList();
   }
 
   showAlertDialog(msg) {
@@ -57,6 +56,7 @@ export default class ListController extends Controller {
     this.addonView.onDetails(this.handleDetails.bind(this));
     this.detailsView.onClose(this.handleCloseDetails.bind(this));
     this.detailsView.onInstall(this.handleInstall.bind(this));
+    this.refreshInstalledList();
 
     this.alreadyCreated = true;
   }
@@ -98,10 +98,18 @@ export default class ListController extends Controller {
   }
 
   handleTabChange(activeTab) {
+    // Changing the hash will eventually invoke activateTab, however we
+    // call it here directly to make the switch animation happen faster.
+    this.activateTab(activeTab);
     window.location.hash = '#' + activeTab;
   }
 
   activateTab(activeTab) {
+    if (this.activeTab === activeTab) {
+      return;
+    }
+    this.activeTab = activeTab;
+
     if (activeTab === 'apps') {
       this.appView.activate();
       this.addonView.deactivate();
