@@ -13,7 +13,7 @@
     "gaia-list": "gaia-components/gaia-list#0.1.7",
     "gaia-button": "gaia-components/gaia-button#0.0.4",
     "gaia-fonts": "gaia-components/gaia-fonts#0.2.1",
-    "gaia-dialog": "gaia-components/gaia-dialog#0.0.3",
+    "gaia-dialog": "gaia-components/gaia-dialog#0.0.4",
     "gaia-tabs": "gaia-components/gaia-tabs#0.0.1",
     "gaia-sub-header": "gaia-components/gaia-sub-header#0.4.0"
   }
