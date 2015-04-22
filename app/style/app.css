@@ -19,6 +19,7 @@ gaia-header {
 }
 
 gaia-header #upload-link {
+  right: 3px;
   background: url(../img/upload.svg) no-repeat 50% 50% / 32px !important;
   filter: invert(100%);
 }
@@ -42,7 +43,7 @@ gaia-header #upload-link {
 }
 
 .install-list .icon {
-  max-height: 100%;
+  max-height: 50px;
   float: left;
   margin-right: 13px;
 }
@@ -131,6 +132,10 @@ gaia-header #upload-link {
 
 #app-details.active {
   transform: translateY(0);
+}
+
+#app-details #close-button {
+  left: -10px;
 }
 
 #app-details #info-section {
