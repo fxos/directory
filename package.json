@@ -6,9 +6,12 @@
     "type": "git",
     "url": "git@github.com:fxos/directory.git"
   },
+  "scripts": {
+    "build": "gulp build"
+  },
   "license": "MPL",
   "dependencies": {
-    "fxos-build": "0.3.x",
+    "fxos-build": "0.7.x",
     "gulp": "3.8.x"
   }
 }
