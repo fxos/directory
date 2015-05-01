@@ -80,16 +80,21 @@ export default class DetailsView extends View {
     ]).then(results => {
       var apps = results[0];
       var addonManifest = results[1];
-      var filteredApps = this.filterNonAffectedApps(apps, addonManifest);
-
-      var affectedAppList;
-      if (apps.length === filteredApps.length) {
-        affectedAppList = 'All applications.';
+      if (!addonManifest) {
+        // If we cannot fetch addon manifest, we cannot display addon info.
+        this.affectedApps.textContent =
+          'Cannot determine affected apps, invalid manifest URL.';
       } else {
-        affectedAppList = this.dedupeAppNames(filteredApps).join(', ');
-      }
-      this.affectedApps.textContent = affectedAppList || 'None';
+        var filteredApps = this.filterNonAffectedApps(apps, addonManifest);
 
+        var affectedAppList;
+        if (apps.length === filteredApps.length) {
+          affectedAppList = 'All applications.';
+        } else {
+          affectedAppList = this.dedupeAppNames(filteredApps).join(', ');
+        }
+        this.affectedApps.textContent = affectedAppList || 'None';
+      }
     }).catch((err) => {
       console.warn('Could not populate affected apps', err);
       // Hide affected apps section when undetermined.

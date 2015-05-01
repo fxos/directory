@@ -53,7 +53,8 @@ export class ManifestHelper {
 export class ActivityHelper {
   constructor() {
     this.ready = new Promise((resolve, reject) => {
-      if (navigator.mozHasPendingMessage('activity')) {
+      if (navigator.mozHasPendingMessage &&
+          navigator.mozHasPendingMessage('activity')) {
         navigator.mozSetMessageHandler('activity', activity => {
           let activitySource = activity.source;
 

@@ -165,20 +165,31 @@ export default class ListController extends Controller {
     }
 
     installReq.onerror = (err) => {
+      var errorMsg;
       var errorType = err.target.error.name;
       switch(errorType) {
         case 'DENIED':
           // If the user cancelled the install, we do nothing.
-          break;
+          return;
 
         case 'NETWORK_ERROR':
-          this.showAlertDialog('Install Error: No network');
+          errorMsg = 'No network';
+          break;
+
+        case 'MANIFEST_URL_ERROR':
+          errorMsg = 'Invalid manifest url';
+          break;
+
+        case 'INVALID_SECURITY_LEVEL':
+          errorMsg = 'Invalid permissions, try enabling developer mode';
           break;
 
         default:
-          this.showAlertDialog('Error installing: ' + err.target.error.name);
+          errorMsg = errorType;
           break;
       }
+
+      this.showAlertDialog('INSTALL ERROR: ' + errorMsg);
     };
 
     installReq.onsuccess = () => {
