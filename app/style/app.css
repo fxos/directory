@@ -7,10 +7,6 @@ body {
   color: var(--title-color);
 }
 
-body.loading {
-  background: url(../img/gears.svg) 50% 50%;
-}
-
 gaia-header {
   --header-background: #9ab0c0;
   --header-icon-color: #ffffff;

@@ -20,7 +20,6 @@ export default class MainController extends RoutingController {
 
   main() {
     this.activityHelper.ready.then(route => {
-      document.body.classList.remove('loading');
       this.view.render(this.activityHelper.isActivity);
 
       // If current hash does not match current route, change the hash
