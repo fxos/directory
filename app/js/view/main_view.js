@@ -23,7 +23,7 @@ export default class MainView extends View {
       <gaia-header ${action}>
         <h1>Hackerplace</h1>
         <a id="upload-link" target="_blank"
-           href="https://github.com/fxos/directory#submission-process"></a>
+           href="https://github.com/fxos/directory/blob/master/README.md#submission-process"></a>
       </gaia-header>
       <gaia-dialog-alert id="alert-dialog">Placeholder</gaia-dialog-alert>`;
     return string;
