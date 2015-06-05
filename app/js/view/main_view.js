@@ -4,6 +4,10 @@ import 'components/gaia-dialog/gaia-dialog-alert';
 import 'components/fxos-dev-mode-dialog/fxos-dev-mode-dialog';
 
 export default class MainView extends View {
+  constructor(opts) {
+    this.el = opts.el;
+    this.uploadHandler = null;
+  }
 
   render(isActivity) {
     super([isActivity]);
@@ -15,16 +19,27 @@ export default class MainView extends View {
           window.dispatchEvent(new CustomEvent('request-activity-finish'));
         }
       });
+    } else {
+      var uploadBtn = document.getElementById('upload-link');
+      if (!uploadBtn) { return; }
+      uploadBtn.addEventListener('click', function(evt) {
+        if (this.uploadHandler) {
+          this.uploadHandler();
+        }
+      }.bind(this));
     }
+  }
+
+  onUpload(handler) {
+    this.uploadHandler = handler;
   }
 
   template(isActivity) {
     var action = isActivity ? 'action="back"' : '';
+    var upload = isActivity ? '' : '<button id="upload-link"></button>';
     var string = `
       <gaia-header ${action}>
-        <h1>Hackerplace</h1>
-        <a id="upload-link" target="_blank"
-           href="https://github.com/fxos/directory/blob/master/README.md#submission-process"></a>
+        <h1>Hackerplace</h1>${upload}
       </gaia-header>
       <gaia-dialog-alert id="alert-dialog">Placeholder</gaia-dialog-alert>
       <fxos-dev-mode-dialog></fxos-dev-mode-dialog>`;
