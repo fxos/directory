@@ -5,6 +5,7 @@ import 'gaia-icons';
 import 'components/gaia-text-input/gaia-text-input';
 import 'components/gaia-text-input/gaia-text-input-multiline';
 import { IconHelper } from 'js/lib/helpers';
+import ListModel from 'js/model/list_model';
 
 export default class UploadView extends View {
   constructor() {
@@ -12,6 +13,20 @@ export default class UploadView extends View {
     this.el.id = 'uploads';
     this.el.classList.add('popup');
     this.currentApp = null;
+
+    this.uploadBlacklist = [
+      'app://ee50b34d-c8ce-b941-8020-5bc4693c770c/manifest.webapp',//FxStumbler
+      'https://webmaker-app.mofostaging.net/manifest.webapp',
+      'app://a9c7eb67-c2c8-8845-b150-5dd0a850200c/manifest.webapp',//Hackerplace
+      'app://7a6c01c5-32fd-d041-9d0c-a70bb6c7c752/manifest.webapp',
+      'app://customizer.gaiamobile.org/manifest.webapp',
+      'app://default_theme.gaiamobile.org/manifest.webapp'
+    ];
+    // Add current directory apps to upload blacklist.
+    var directoryApps = (new ListModel()).getAppList();
+    for (var manifestURL in directoryApps) {
+      this.uploadBlacklist.push(manifestURL);
+    }
   }
 
   render() {
@@ -37,6 +52,18 @@ export default class UploadView extends View {
     this.alertDialog.open();
   }
 
+  isEligible(app) {
+    if (this.uploadBlacklist.indexOf(app.manifestURL) !== -1) {
+      return false;
+    }
+    if (app.manifest.role === 'theme' || app.manifest.role === 'addon') {
+      return true;
+    }
+    // Only non-gaia non-marketplace apps are eligible for hackerplace.
+    return (!app.installOrigin.endsWith('gaiamobile.org') &&
+            app.installOrigin !== 'https://marketplace.firefox.com');
+  }
+
   createList() {
     var req;
     if (navigator.mozApps.mgmt) {
@@ -47,7 +74,7 @@ export default class UploadView extends View {
     req.onsuccess = () => {
       var apps = req.result;
       apps.forEach(app => {
-        if (app.manifest.type !== 'certified') {
+        if (this.isEligible(app)) {
           var item = document.createElement('li');
           var icon = this.getIconUrl(app.manifest, app.origin);
           item.classList.add('item');
