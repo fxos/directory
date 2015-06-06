@@ -105,15 +105,19 @@ export default class UploadView extends View {
   }
 
   showForm(app) {
-    this.nameInput.value = '';
-    this.descriptionInput.value = '';
+    this.nameInput.value =
+      app.manifest.developer && app.manifest.developer.name || '';
+    this.descriptionInput.value = app.manifest.description || '';
     this.currentApp = app;
     this.displayName.textContent = app.manifest.name;
-    IconHelper.setImage(this.displayIcon, this.getIconUrl(app.manifest, app.origin));
+    IconHelper.setImage(this.displayIcon,
+      this.getIconUrl(app.manifest, app.origin));
     this.el.classList.add('form');
   }
 
   hideForm(app) {
+    this.nameInput.value = '';
+    this.descriptionInput.value = '';
     this.currentApp = null;
     this.el.classList.remove('form');
   }
@@ -139,17 +143,25 @@ export default class UploadView extends View {
     }
 
     this.currentApp.export().then((blob) => {
-      console.log('got an app blob!');
+      var name = encodeURIComponent(this.nameInput.value);
+      var description = encodeURIComponent(this.descriptionInput.value);
+      var url =
+        `http://104.236.138.217/upload?name=${name}&description=${description}`;
       var ajax = new XMLHttpRequest();
-      ajax.open('POST', 'http://104.236.138.217/upload', true);
+      ajax.open('POST', url, true);
       ajax.onload = () => {
         this.showAlertDialog('Upload success, thank you!');
       };
-      ajax.error = (e) => {
+      ajax.error = e => {
         this.showAlertDialog('App upload failed, ' + e);
         console.log('Upload failed', e);
       };
       ajax.send(blob);
+      this.showAlertDialog(`Thank you ${this.nameInput.value}!`);
+      this.hideForm();
+    }).catch(e => {
+      this.showAlertDialog('Error exporting app');
+      console.log('Error exporting app', e);
     });
   }
 

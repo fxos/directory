@@ -17,7 +17,6 @@ export default class MainController extends RoutingController {
       apps: this.listController,
       addons: this.listController
     });
-
   }
 
   main() {
