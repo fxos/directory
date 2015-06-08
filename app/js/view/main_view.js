@@ -1,6 +1,7 @@
 import { View } from 'components/fxos-mvc/dist/mvc';
 import 'components/gaia-header/dist/gaia-header';
 import 'components/gaia-dialog/gaia-dialog-alert';
+import 'components/fxos-dev-mode-dialog/fxos-dev-mode-dialog';
 
 export default class MainView extends View {
 
@@ -25,7 +26,8 @@ export default class MainView extends View {
         <a id="upload-link" target="_blank"
            href="https://github.com/fxos/directory/blob/master/README.md#submission-process"></a>
       </gaia-header>
-      <gaia-dialog-alert id="alert-dialog">Placeholder</gaia-dialog-alert>`;
+      <gaia-dialog-alert id="alert-dialog">Placeholder</gaia-dialog-alert>
+      <fxos-dev-mode-dialog></fxos-dev-mode-dialog>`;
     return string;
   }
 }
