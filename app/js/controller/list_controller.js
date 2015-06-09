@@ -194,6 +194,15 @@ export default class ListController extends Controller {
 
     installReq.onsuccess = () => {
       this.refreshInstalledList();
+      window.dispatchEvent(new CustomEvent('achievement-rewarded', {
+        detail: {
+          criteria: 'achievements/fab-finder',
+          evidence: 'urn:fxos-directory:app:installed',
+          name: 'Fab Finder',
+          description: 'Install an app or add-on from Hackerplace',
+          image: './img/fab-finder.png'
+        }
+      }));
     };
   }
 }

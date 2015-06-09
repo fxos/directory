@@ -1,3 +1,6 @@
+import AchievementsService from
+  'components/fxos-achievements-service/dist/achievements-service';
+
 export class IconHelper {
   static setImage(imageElement, imagePath) {
     imageElement.src = imagePath || window.DEFAULT_ICON_URL;
@@ -78,5 +81,18 @@ export class ActivityHelper {
 
   getRoute(type) {
     return type || 'apps';
+  }
+}
+
+export class AchievementsHelper {
+  constructor() {
+    // Create an achievements service
+    this.achievementsService = new AchievementsService();
+
+    window.addEventListener('achievement-rewarded', this);
+  }
+
+  handleEvent(aEvent) {
+    this.achievementsService.reward(aEvent.detail);
   }
 }
