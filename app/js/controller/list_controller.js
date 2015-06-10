@@ -45,7 +45,7 @@ export default class ListController extends Controller {
     document.body.appendChild(this.addonView.el);
     this.detailsView.render();
     document.body.appendChild(this.detailsView.el);
-    this.alertDialog = document.querySelector('#alert-dialog');
+    this.alertDialog = document.body.querySelector('#alert-dialog');
 
     this.list = this.model.getAppList();
     this.appView.update(this.list);

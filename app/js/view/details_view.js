@@ -1,6 +1,7 @@
 import { View } from 'components/fxos-mvc/dist/mvc';
 import 'components/gaia-header/dist/gaia-header';
 import 'components/gaia-sub-header/gaia-sub-header';
+import 'components/gaia-list/gaia-list';
 import 'components/gaia-button/gaia-button';
 import { IconHelper, AppsHelper, ManifestHelper } from 'js/lib/helpers';
 
@@ -12,6 +13,7 @@ export default class DetailsView extends View {
   constructor() {
     this.el = document.createElement('div');
     this.el.id = 'app-details';
+    this.el.classList.add('popup');
     this.closeHandlers = [];
     this.installHandlers = [];
   }
@@ -153,10 +155,10 @@ export default class DetailsView extends View {
   template() {
     var string = `
       <gaia-header>
-        <a id="close-button"><i data-icon="close"></i></a>
+        <a id="close-button" class="close"><i data-icon="close"></i></a>
         <h1 id="details-title">App Details</h1>
       </gaia-header>
-      <gaia-list id="info-section" class="install-list">
+      <gaia-list class="info-list install-list">
         <li class="item">
           <img class="icon" />
           <div flex class="description">

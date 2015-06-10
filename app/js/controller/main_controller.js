@@ -3,6 +3,7 @@ import 'gaia-component';
 import 'gaia-dialog';
 import MainView from 'js/view/main_view';
 import ListController from 'js/controller/list_controller';
+import UploadView from 'js/view/upload_view.js';
 
 import { ActivityHelper } from 'js/lib/helpers';
 
@@ -21,6 +22,10 @@ export default class MainController extends RoutingController {
   main() {
     this.activityHelper.ready.then(route => {
       this.view.render(this.activityHelper.isActivity);
+      // We cannot upload from the activity.
+      if (!this.activityHelper.isActivity) {
+        this.renderUploadView();
+      }
 
       // If current hash does not match current route, change the hash
       // to invoke routing function, otherwise invoke route explicitly.
@@ -29,6 +34,15 @@ export default class MainController extends RoutingController {
       } else {
         this.route();
       }
+    });
+  }
+
+  renderUploadView() {
+    this.uploadView = new UploadView();
+    this.uploadView.render();
+    this.view.el.appendChild(this.uploadView.el);
+    this.view.onUpload(() => {
+      this.uploadView.show();
     });
   }
 }
