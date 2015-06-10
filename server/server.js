@@ -18,7 +18,7 @@ function upload(req, res) {
   var oldPath = req.headers['x-file'];
   var newPath = path.resolve(__dirname, PUBLIC_PATH);
 
-  var prefix = name.replace(' ', '_') + '__' + uuid.v1();
+  var prefix = uuid.v1();
   var packageFilename = prefix + '.zip';
   var metaFilename = prefix + '.txt';
 
