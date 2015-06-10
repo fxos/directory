@@ -7,6 +7,8 @@ import 'components/gaia-text-input/gaia-text-input-multiline';
 import { IconHelper } from 'js/lib/helpers';
 import ListModel from 'js/model/list_model';
 
+var UPLOAD_URL = 'http://henretty.us/upload';
+
 export default class UploadView extends View {
   constructor() {
     this.el = document.createElement('div');
@@ -31,14 +33,14 @@ export default class UploadView extends View {
 
   render() {
     super();
-    this.closeButton = this.el.querySelector('.close');
-    this.cancelButton = this.el.querySelector('#upload-cancel');
-    this.submitButton = this.el.querySelector('#upload-submit');
-    this.list = this.el.querySelector('#upload-list');
-    this.displayName = this.el.querySelector('#display-name');
-    this.displayIcon = this.el.querySelector('#display-icon');
-    this.nameInput = this.el.querySelector('#upload-name');
-    this.descriptionInput = this.el.querySelector('#upload-description');
+    this.closeButton = this.$('.close');
+    this.cancelButton = this.$('#upload-cancel');
+    this.submitButton = this.$('#upload-submit');
+    this.list = this.$('#upload-list');
+    this.displayName = this.$('#display-name');
+    this.displayIcon = this.$('#display-icon');
+    this.nameInput = this.$('#upload-name');
+    this.descriptionInput = this.$('#upload-description');
     this.alertDialog = document.body.querySelector('#alert-dialog');
 
     this.closeButton.addEventListener('click', this.hide.bind(this));
@@ -60,8 +62,8 @@ export default class UploadView extends View {
       return true;
     }
     // Only non-gaia non-marketplace apps are eligible for hackerplace.
-    return (!app.installOrigin.endsWith('gaiamobile.org') &&
-            app.installOrigin !== 'https://marketplace.firefox.com');
+    return (app.removable &&
+      app.installOrigin !== 'https://marketplace.firefox.com');
   }
 
   createList() {
@@ -98,6 +100,8 @@ export default class UploadView extends View {
     for (var size in manifest.icons) {
       url = manifest.icons[size];
     }
+    // If we are given a relative path, we naively append app origin
+    // to construct the full icon path.
     if (url.startsWith('/')) {
       url = origin + url;
     }
@@ -145,19 +149,19 @@ export default class UploadView extends View {
     this.currentApp.export().then((blob) => {
       var name = encodeURIComponent(this.nameInput.value);
       var description = encodeURIComponent(this.descriptionInput.value);
-      var url =
-        `http://104.236.138.217/upload?name=${name}&description=${description}`;
+      var url = `${UPLOAD_URL}?name=${name}&description=${description}`;
       var ajax = new XMLHttpRequest();
       ajax.open('POST', url, true);
       ajax.onload = () => {
-        this.showAlertDialog('Upload success, thank you!');
+        console.log('Upload complete');
       };
       ajax.error = e => {
         this.showAlertDialog('App upload failed, ' + e);
         console.log('Upload failed', e);
       };
       ajax.send(blob);
-      this.showAlertDialog(`Thank you ${this.nameInput.value}!`);
+      this.showAlertDialog(
+        'Upload success! We will now review your app for the Hackerplace.');
       this.hideForm();
     }).catch(e => {
       this.showAlertDialog('Error exporting app');

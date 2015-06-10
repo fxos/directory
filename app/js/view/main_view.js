@@ -22,11 +22,11 @@ export default class MainView extends View {
     } else {
       var uploadBtn = document.getElementById('upload-link');
       if (!uploadBtn) { return; }
-      uploadBtn.addEventListener('click', function(evt) {
+      uploadBtn.addEventListener('click', () => {
         if (this.uploadHandler) {
           this.uploadHandler();
         }
-      }.bind(this));
+      });
     }
   }
 

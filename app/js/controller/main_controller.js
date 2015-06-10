@@ -41,6 +41,8 @@ export default class MainController extends RoutingController {
     this.uploadView = new UploadView();
     this.uploadView.render();
     this.view.el.appendChild(this.uploadView.el);
-    this.view.onUpload(this.uploadView.show.bind(this.uploadView));
+    this.view.onUpload(() => {
+      this.uploadView.show();
+    });
   }
 }
