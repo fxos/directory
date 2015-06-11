@@ -193,6 +193,10 @@ export default class ListController extends Controller {
     };
 
     installReq.onsuccess = () => {
+      if (type === 'addon') {
+        // Enable add-ons immediately by default.
+        navigator.mozApps.mgmt.setEnabled(installReq.result, true);
+      }
       this.refreshInstalledList();
     };
   }
