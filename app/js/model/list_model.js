@@ -48,6 +48,16 @@ export default class ListModel extends Model {
         type: 'addon',
         url: 'https://github.com/mikehenrty/fxos-cracked',
         revision: '16016c86f464c23e0465b22d43c08f52c1cc7349'
+      },
+      'https://callahad.github.io/fxos-tabswitcher-addon/src/manifest.webapp': {
+        manifestURL: 'https://callahad.github.io/fxos-tabswitcher-addon/src/manifest.webapp',
+        name: 'Tab Switcher Shortcut',
+        description: 'Adds a button to the browser that immediately opens the tab switcher',
+        icon: 'https://callahad.github.io/fxos-tabswitcher-addon/src/icon-128x128.png',
+        author: 'Dan Callahan',
+        type: 'addon',
+        url: 'https://github.com/callahad/fxos-tabswitcher-addon',
+        revision: '7096c0545980e250ee5be505b746421ffb9b19ce'
       }
     };
   }
