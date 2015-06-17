@@ -75,8 +75,10 @@ export default class UploadView extends View {
     }
     req.onsuccess = () => {
       var apps = req.result;
+      var atLeastOneEligibleApp = false;
       apps.forEach(app => {
         if (this.isEligible(app)) {
+          atLeastOneEligibleApp = true;
           var item = document.createElement('li');
           var icon = this.getIconUrl(app.manifest, app.origin);
           item.classList.add('item');
@@ -86,6 +88,14 @@ export default class UploadView extends View {
           item.addEventListener('click', this.showForm.bind(this, app));
         }
       });
+
+      // Inform user if we did not find any uploadable apps.
+      if (!atLeastOneEligibleApp) {
+        var item = document.createElement('li');
+        item.textContent = 'No apps or addons to upload.';
+        this.list.appendChild(item);
+        return;
+      }
     };
     req.onerror = e => {
       console.log('Unable to fetch installed apps.', e);
