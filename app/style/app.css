@@ -8,6 +8,7 @@ body {
 
   --header-height: 50px;
   --tabs-height: 45px;
+  --offline-height: 78px;
   --slide-transition: transform 0.2s ease;
 }
 
@@ -43,6 +44,10 @@ gaia-header #upload-link {
   width: 100%;
   height: calc(95vh - var(--header-height) - var(--tabs-height));
   overflow: scroll !important;
+}
+
+body:not(.online) .install-list:not(.info-list) {
+  height: calc(95vh - var(--header-height) - var(--tabs-height) - var(--offline-height));
 }
 
 .install-list > .item {
@@ -127,7 +132,7 @@ gaia-header #upload-link {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 2;
+  z-index: 3;
   background-color: var(--background);
   color: var(--text-color);
   --header-icon-color: var(--text-color);
@@ -191,4 +196,14 @@ gaia-list.info-list {
 #upload-buttons gaia-button {
   width: 45% !important;
   display: inline !important;
+}
+
+#offline-container {
+  --text-color: white;
+  height: var(--offline-height);
+  background: #F0AD4E;
+}
+
+body.online #offline-container {
+  display: none !important;
 }

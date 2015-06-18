@@ -2,6 +2,7 @@ import { Controller } from 'components/fxos-mvc/dist/mvc';
 
 import ListModel from 'js/model/list_model';
 import TabsView from 'js/view/tabs_view';
+import OfflineView from 'js/view/offline_view';
 import AppListView from 'js/view/app_list_view';
 import AddonListView from 'js/view/addon_list_view';
 import DetailsView from 'js/view/details_view';
@@ -12,6 +13,7 @@ export default class ListController extends Controller {
 
     this.model = new ListModel();
     this.tabsView = new TabsView();
+    this.offlineView = new OfflineView();
     this.appView = new AppListView();
     this.addonView = new AddonListView();
     this.detailsView = new DetailsView();
@@ -25,7 +27,7 @@ export default class ListController extends Controller {
     let hash = window.location.hash;
     let tab = hash && hash.slice(1);
 
-    if (!this.alreadyCreated) {
+    if (!this.initialized) {
       this.createList(tab);
     }
     this.activateTab(tab);
@@ -37,6 +39,8 @@ export default class ListController extends Controller {
   }
 
   createList(tab) {
+    this.offlineView.render();
+    document.body.appendChild(this.offlineView.el);
     this.tabsView.render(tab);
     document.body.appendChild(this.tabsView.el);
     this.appView.render();
@@ -47,18 +51,40 @@ export default class ListController extends Controller {
     document.body.appendChild(this.detailsView.el);
     this.alertDialog = document.body.querySelector('#alert-dialog');
 
-    this.list = this.model.getAppList();
-    this.appView.update(this.list);
-    this.addonView.update(this.list);
     this.appView.onInstall(this.handleInstall.bind(this));
     this.addonView.onInstall(this.handleInstall.bind(this));
     this.appView.onDetails(this.handleDetails.bind(this));
     this.addonView.onDetails(this.handleDetails.bind(this));
     this.detailsView.onClose(this.handleCloseDetails.bind(this));
     this.detailsView.onInstall(this.handleInstall.bind(this));
-    this.refreshInstalledList();
 
-    this.alreadyCreated = true;
+    this.getApps();
+    this.watchConnection();
+
+    this.initialized = true;
+  }
+
+  getApps() {
+    this.model.getAppList().then(list => {
+      this.list = list;
+      this.appView.update(list);
+      this.addonView.update(list);
+      this.refreshInstalledList();
+    });
+  }
+
+  watchConnection() {
+    window.addEventListener('online', this.handleConnection.bind(this));
+    window.addEventListener('offline', this.handleConnection.bind(this));
+    this.handleConnection();
+  }
+
+  handleConnection() {
+    var online = navigator.onLine;
+    this.offlineView.update(online);
+    if (online) {
+      this.getApps();
+    }
   }
 
   refreshInstalledList() {
