@@ -3,15 +3,6 @@ import { Model } from 'components/fxos-mvc/dist/mvc';
 export default class ListModel extends Model {
   getAppList() {
     return {
-      'http://fxos.github.io/sharing/dist/app/manifest.webapp': {
-        manifestURL: 'http://fxos.github.io/sharing/dist/app/manifest.webapp',
-        name: 'sharing',
-        description: 'Share applications with your friends over Wifi.',
-        author: 'Doug Sherk',
-        type: 'hosted',
-        url: 'https://github.com/fxos/sharing',
-        revision: 'e908d4eff5799b038fd318084254a8b93709bada'
-      },
       'http://fxos.github.io/camera/dist/app/manifest.webapp': {
         manifestURL: 'http://fxos.github.io/camera/dist/app/manifest.webapp',
         name: 'camera',
@@ -20,15 +11,6 @@ export default class ListModel extends Model {
         type: 'hosted',
         url: 'https://github.com/fxos/camera',
         revision: '8b5a7d9061a0d0210f24ff253110a8ce935104ca'
-      },
-      'http://fxos.github.io/video/app/manifest.webapp': {
-        manifestURL: 'http://fxos.github.io/video/app/manifest.webapp',
-        name: 'video',
-        description: 'Become the next Steven Spielberg.',
-        author: 'Justin D\'Arcangelo',
-        type: 'hosted',
-        url: 'https://github.com/fxos/video',
-        revision: 'b3c913669bc7039e980586bd9d319a0ca2ac6003'
       },
       'http://fxos.github.io/dialer/dist/app/manifest.webapp': {
         manifestURL: 'http://fxos.github.io/dialer/dist/app/manifest.webapp',
