@@ -60,14 +60,14 @@ export default class ListView extends View {
     IconHelper.setImage(item.querySelector('.icon'), data.icon);
     this.el.appendChild(item);
 
-    item.addEventListener('click', function(data, evt) {
+    item.addEventListener('click', function(manifestURL, evt) {
       if (evt.target.classList.contains('install-button')) {
         return;
       }
       this.detailsHandlers.forEach(handler => {
-        handler(data);
+        handler(manifestURL);
       });
-    }.bind(this, data));
+    }.bind(this, data.manifestURL));
 
     item.querySelector('.install-button').addEventListener('click',
       function(data) {
