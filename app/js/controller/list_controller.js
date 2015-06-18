@@ -67,8 +67,6 @@ export default class ListController extends Controller {
   getApps() {
     this.model.getAppList().then(list => {
       this.list = list;
-      this.appView.update(list);
-      this.addonView.update(list);
       this.refreshInstalledList();
     });
   }
@@ -157,8 +155,8 @@ export default class ListController extends Controller {
     }
   }
 
-  handleDetails(data) {
-    this.detailsView.show(data);
+  handleDetails(manifestURL) {
+    this.detailsView.show(this.list[manifestURL]);
   }
 
   handleCloseDetails() {
