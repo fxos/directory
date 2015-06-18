@@ -23,15 +23,15 @@ export default class ListModel extends Model {
         url: 'https://github.com/fxos/dialer',
         revision: '835af6ccf608a51bc87711d1c40fc4f33a1fc12b'
       },
-      'http://mikehenrty.github.io/fxos-cracked/manifest.webapp': {
-        manifestURL: 'http://mikehenrty.github.io/fxos-cracked/manifest.webapp',
-        name: 'cracked',
-        description: 'A virtual cracked screen for your FirefoxOS device.',
-        icon: 'http://mikehenrty.github.io/fxos-cracked/style/icons/128.png',
+      'http://mikehenrty.github.io/fxos-magnifier/manifest.webapp': {
+        manifestURL: 'http://mikehenrty.github.io/fxos-magnifier/manifest.webapp',
+        name: 'magnifier',
+        description: 'Tap three times and hold to magnify the screen.',
+        icon: 'http://mikehenrty.github.io/fxos-magnifier/style/icons/60.png',
         author: 'David Flanagan',
         type: 'addon',
-        url: 'https://github.com/mikehenrty/fxos-cracked',
-        revision: '16016c86f464c23e0465b22d43c08f52c1cc7349'
+        url: 'https://github.com/mikehenrty/fxos-magnifier',
+        revision: '262d9e1cbae2d267009294ebeb045da4e4920eb4'
       },
       'https://callahad.github.io/fxos-tabswitcher-addon/src/manifest.webapp': {
         manifestURL: 'https://callahad.github.io/fxos-tabswitcher-addon/src/manifest.webapp',
@@ -42,6 +42,16 @@ export default class ListModel extends Model {
         type: 'addon',
         url: 'https://github.com/callahad/fxos-tabswitcher-addon',
         revision: '7096c0545980e250ee5be505b746421ffb9b19ce'
+      },
+      'http://mikehenrty.github.io/fxos-cracked/manifest.webapp': {
+        manifestURL: 'http://mikehenrty.github.io/fxos-cracked/manifest.webapp',
+        name: 'cracked',
+        description: 'A virtual cracked screen for your FirefoxOS device.',
+        icon: 'http://mikehenrty.github.io/fxos-cracked/style/icons/128.png',
+        author: 'David Flanagan',
+        type: 'addon',
+        url: 'https://github.com/mikehenrty/fxos-cracked',
+        revision: '16016c86f464c23e0465b22d43c08f52c1cc7349'
       },
       'https://callahad.github.io/disconnected-ensemble-src/src/manifest.webapp': {
         manifestURL: 'https://callahad.github.io/disconnected-ensemble-src/src/manifest.webapp',
