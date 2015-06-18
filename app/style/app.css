@@ -54,6 +54,10 @@ body:not(.online) .install-list:not(.info-list) {
   height: 66px;
 }
 
+.install-list .description {
+  overflow: hidden;
+}
+
 .install-list .icon {
   max-height: 50px;
   float: left;
@@ -64,12 +68,18 @@ body:not(.online) .install-list:not(.info-list) {
   margin: 0;
   font-size: 19px !important;
   color: var(--text-color);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .author {
   margin: 0;
   font-size: 15px !important;
   color: var(--title-color);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .install-list {
@@ -83,7 +93,7 @@ body:not(.online) .install-list:not(.info-list) {
 .install-list .install-button {
   font-size: 12px !important;
   height: 30px !important;
-  min-width: 75px !important;
+  min-width: 70px !important;
   padding: 0 !important;
   margin: 0 !important;
   --button-color: var(--title-color);
@@ -107,6 +117,7 @@ body:not(.online) .install-list:not(.info-list) {
   font-style: italic;
   color: var(--title-color);
   display: none;
+  padding: 0 9px;
 }
 
 .install-list .addon.installed .install-info {
