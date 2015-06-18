@@ -1,5 +1,7 @@
 import { Model } from 'components/fxos-mvc/dist/mvc';
 
+// jshint maxlen:false
+
 export default class ListModel extends Model {
   getAppList() {
     return {
@@ -40,6 +42,16 @@ export default class ListModel extends Model {
         type: 'addon',
         url: 'https://github.com/callahad/fxos-tabswitcher-addon',
         revision: '7096c0545980e250ee5be505b746421ffb9b19ce'
+      },
+      'https://callahad.github.io/disconnected-ensemble-src/src/manifest.webapp': {
+        manifestURL: 'https://callahad.github.io/disconnected-ensemble-src/src/manifest.webapp',
+        name: 'disconnected ensemble',
+        description: 'An app for Firefox OS that lets you share a number of musical toys that can run in your friends\' devices, served from your phone, either by typing in the IP address of the phone server, or by bumping NFC devices together.',
+        icon: 'https://callahad.github.io/disconnected-ensemble-src/src/img/icons/icon128x128.png',
+        author: 'soledad penadés',
+        type: 'packaged',
+        url: 'https://github.com/callahad/disconnected-ensemble-src',
+        revision: '94ad2d961aa5a902fe8150b280a38f48d84607eb'
       }
     };
   }
