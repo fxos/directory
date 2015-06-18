@@ -50,10 +50,6 @@ body:not(.online) .install-list:not(.info-list) {
   height: calc(95vh - var(--header-height) - var(--tabs-height) - var(--offline-height));
 }
 
-.install-list > .item {
-  height: 66px;
-}
-
 .install-list .description {
   overflow: hidden;
 }
