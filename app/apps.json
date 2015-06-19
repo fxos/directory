@@ -1,22 +1,4 @@
 {
-    "http://fxos.github.io/camera/dist/app/manifest.webapp": {
-      "manifestURL": "http://fxos.github.io/camera/dist/app/manifest.webapp",
-      "name": "camera",
-      "description": "Take pictures and stuff.",
-      "author": "Justin D'Arcangelo",
-      "type": "hosted",
-      "url": "https://github.com/fxos/camera",
-      "revision": "8b5a7d9061a0d0210f24ff253110a8ce935104ca"
-    },
-    "http://fxos.github.io/dialer/dist/app/manifest.webapp": {
-      "manifestURL": "http://fxos.github.io/dialer/dist/app/manifest.webapp",
-      "name": "dialer",
-      "description": "A replacement for the built-in dialer app.",
-      "author": "Doug Sherk",
-      "type": "hosted",
-      "url": "https://github.com/fxos/dialer",
-      "revision": "835af6ccf608a51bc87711d1c40fc4f33a1fc12b"
-    },
     "http://mikehenrty.github.io/fxos-magnifier/manifest.webapp": {
       "manifestURL": "http://mikehenrty.github.io/fxos-magnifier/manifest.webapp",
       "name": "magnifier",
@@ -49,12 +31,40 @@
     },
     "https://callahad.github.io/disconnected-ensemble-src/src/manifest.webapp": {
       "manifestURL": "https://callahad.github.io/disconnected-ensemble-src/src/manifest.webapp",
-      "name": "disconnected ensemble",
+      "name": "ensemble",
       "description": "An app for Firefox OS that lets you share a number of musical toys that can run in your friends' devices, served from your phone, either by typing in the IP address of the phone server, or by bumping NFC devices together.",
       "icon": "https://callahad.github.io/disconnected-ensemble-src/src/img/icons/icon128x128.png",
       "author": "soledad penadés",
       "type": "packaged",
       "url": "https://github.com/callahad/disconnected-ensemble-src",
       "revision": "94ad2d961aa5a902fe8150b280a38f48d84607eb"
+    },
+    "http://mikehenrty.github.io/IRCCloudNotifier/manifest.webapp": {
+      "manifestURL": "http://mikehenrty.github.io/IRCCloudNotifier/manifest.webapp",
+      "name": "IRCCloud Notifier",
+      "description": "Allows you to log into IRCCloud and get alerts on new notifications. Not a full IRC client.",
+      "icon": "http://mikehenrty.github.io/IRCCloudNotifier/img/icons/icon60x60.png",
+      "author": "Nathaniel van Diepen",
+      "type": "hosted",
+      "url": "https://github.com/Eeems/IRCCloudNotifier",
+      "revision": "a96a83b1f01903bc04be2a5097c82765f3b7d0f7"
+    },
+    "http://fxos.github.io/camera/dist/app/manifest.webapp": {
+      "manifestURL": "http://fxos.github.io/camera/dist/app/manifest.webapp",
+      "name": "New Camera",
+      "description": "Take pictures and stuff.",
+      "author": "Justin D'Arcangelo",
+      "type": "hosted",
+      "url": "https://github.com/fxos/camera",
+      "revision": "8b5a7d9061a0d0210f24ff253110a8ce935104ca"
+    },
+    "http://fxos.github.io/dialer/dist/app/manifest.webapp": {
+      "manifestURL": "http://fxos.github.io/dialer/dist/app/manifest.webapp",
+      "name": "New Dialer",
+      "description": "A replacement for the built-in dialer app.",
+      "author": "Doug Sherk",
+      "type": "hosted",
+      "url": "https://github.com/fxos/dialer",
+      "revision": "835af6ccf608a51bc87711d1c40fc4f33a1fc12b"
     }
 }
