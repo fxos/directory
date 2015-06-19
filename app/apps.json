@@ -42,7 +42,7 @@
     "http://mikehenrty.github.io/IRCCloudNotifier/manifest.webapp": {
       "manifestURL": "http://mikehenrty.github.io/IRCCloudNotifier/manifest.webapp",
       "name": "IRCCloud Notifier",
-      "description": "Allows you to log into IRCCloud and get alerts on new notifications.",
+      "description": "Allows you to log into IRCCloud and get alerts on new notifications. Not a full IRC client.",
       "icon": "http://mikehenrty.github.io/IRCCloudNotifier/img/icons/icon60x60.png",
       "author": "Nathaniel van Diepen",
       "type": "hosted",
