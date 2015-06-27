@@ -66,5 +66,15 @@
       "type": "hosted",
       "url": "https://github.com/fxos/dialer",
       "revision": "835af6ccf608a51bc87711d1c40fc4f33a1fc12b"
+    },
+    "http://sfoster.github.io/fxos-close-all-addon/dist/manifest.webapp": {
+      "manifestURL": "http://sfoster.github.io/fxos-close-all-addon/dist/manifest.webapp",
+      "name": "Close All",
+      "description": "An Add-on to close all apps from the task manager",
+      "icon": "http://sfoster.github.io/fxos-close-all-addon/dist/icons/cameo-scythe-128.png",
+      "author": "Sam Foster",
+      "type": "hosted",
+      "url": "https://github.com/sfoster/fxos-close-all-addon",
+      "revision": "4b2ce361ec571116bc2d41b387c8f6f4a4560793"
     }
 }
