@@ -66,5 +66,15 @@
       "type": "hosted",
       "url": "https://github.com/fxos/dialer",
       "revision": "835af6ccf608a51bc87711d1c40fc4f33a1fc12b"
+    },
+    "http://mikehenrty.github.io/fxos-shb-plus/manifest.webapp": {
+      "manifestURL": "http://mikehenrty.github.io/fxos-shb-plus/manifest.webapp",
+      "name": "Homebar Plus",
+      "description": "Add show windows, and kill app button to the software home button bar",
+      "icon": "http://mikehenrty.github.io/fxos-shb-plus/icons/home.png",
+      "author": "Michael Henretty",
+      "type": "addon",
+      "url": "https://github.com/mikehenrty/fxos-shb-plus",
+      "revision": "9b4ed3b83735a3fcd764b317499efde5b1e64f68"
     }
 }
