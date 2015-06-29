@@ -76,5 +76,15 @@
       "type": "addon",
       "url": "https://github.com/mikehenrty/fxos-shb-plus",
       "revision": "9b4ed3b83735a3fcd764b317499efde5b1e64f68"
+    },
+    "http://albertopq.github.io/gaia-current-page/manifest.webapp": {
+      "manifestURL": "http://albertopq.github.io/gaia-current-page/manifest.webapp",
+      "name": "Current Page",
+      "description": "Open last visited page instead of a new instance when opening the Browser app",
+      "icon": "http://albertopq.github.io/gaia-current-page/icons/128.png",
+      "author": "Alberto Pastor",
+      "type": "addon",
+      "url": "https://github.com/albertopq/gaia-current-page",
+      "revision": "e313ae88aa7c4f22de4fd9742f2224576148661b"
     }
 }
