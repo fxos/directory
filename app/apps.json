@@ -76,5 +76,14 @@
       "type": "addon",
       "url": "https://github.com/mikehenrty/fxos-shb-plus",
       "revision": "9b4ed3b83735a3fcd764b317499efde5b1e64f68"
+    },
+    "http://lmorchard.github.io/fxos-addon-quick-brightness/manifest.webapp": {
+      "manifestURL": "http://lmorchard.github.io/fxos-addon-quick-brightness/manifest.webapp",
+      "name": "System - Quick Brightness",
+      "description": "Adds a brightness slider to the notification tray",
+      "author": "Les Orchard",
+      "type": "addon",
+      "url": "https://github.com/lmorchard/fxos-addon-quick-brightness",
+      "revision": "cbabf181afb19ccb414fb2501a4f4264d3373272"
     }
 }
