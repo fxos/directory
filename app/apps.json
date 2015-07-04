@@ -76,5 +76,15 @@
       "type": "addon",
       "url": "https://github.com/mikehenrty/fxos-shb-plus",
       "revision": "9b4ed3b83735a3fcd764b317499efde5b1e64f68"
+    },
+    "https://begeeben.github.io/fxos-facebook-menubar/manifest.webapp": {
+      "manifestURL": "https://begeeben.github.io/fxos-facebook-menubar/manifest.webapp",
+      "name": "Facebook Menubar",
+      "description": "Keep the menu bar always available on Firefox OS Facebook app.",
+      "icon": "http://begeeben.github.io/fxos-facebook-menubar/icons/facebook-menubar.png",
+      "author": "begeeben",
+      "type": "addon",
+      "url": "https://github.com/begeeben/fxos-facebook-menubar",
+      "revision": "39430a5564e48c7cd4ab5d574db3c299eda02f08"
     }
 }
