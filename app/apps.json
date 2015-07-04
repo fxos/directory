@@ -87,6 +87,16 @@
       "url": "https://github.com/marumari/sunset-fxos-addon",
       "revision": "7b8cdec443ba73fa876632ba424a079738c0a0130f7d5cd04073d730bd1bf054"
     },
+    "https://john-hu.github.io/no-more-contextmenu/manifest.webapp": {
+      "manifestURL": "https://john-hu.github.io/no-more-contextmenu/manifest.webapp",
+      "name": "No Context Menu",
+      "description": "Disable context menu in apps without handle it",
+      "icon": "http://john-hu.github.io/no-more-contextmenu/icons/128.png",
+      "author": "John Hu",
+      "type": "addon",
+      "url": "https://github.com/john-hu/no-more-contextmenu",
+      "revision": "41eddc4f6929d1cc591fcb9b123c13bcce31ec76"
+    },
     "https://lmorchard.github.io/fxos-addon-quick-brightness/manifest.webapp": {
       "manifestURL": "https://lmorchard.github.io/fxos-addon-quick-brightness/manifest.webapp",
       "name": "System - Quick Brightness",
