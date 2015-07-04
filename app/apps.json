@@ -99,7 +99,7 @@
     },
     "https://lmorchard.github.io/fxos-addon-quick-brightness/manifest.webapp": {
       "manifestURL": "https://lmorchard.github.io/fxos-addon-quick-brightness/manifest.webapp",
-      "name": "System - Quick Brightness",
+      "name": "Quick Brightness",
       "description": "Adds a brightness slider to the notification tray",
       "author": "Les Orchard",
       "type": "addon",
