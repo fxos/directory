@@ -29,6 +29,7 @@ export default class DetailsView extends View {
     this.addonSection = this.el.querySelector('#addon-section');
     this.affectedApps = this.el.querySelector('#affected-apps');
     this.installButton = this.el.querySelector('.install-button');
+    this.repoLink = this.el.querySelector('#repo-link');
 
     this.installButton.addEventListener('click', () => {
       this.installHandlers.forEach(handler => {
@@ -117,6 +118,8 @@ export default class DetailsView extends View {
     this.installButton.classList.toggle('installed', details.installed);
     this.installButton.disabled = false;
     this.addonSection.hidden = true;
+    this.repoLink.href = details.url;
+    this.repoLink.textContent = details.url;
 
     // Addons need the affected apps section, and no Open button.
     if (details.type === 'addon') {
@@ -170,6 +173,7 @@ export default class DetailsView extends View {
         </li>
       </gaia-list>
       <p id="full-description"></p>
+      <p id="repo"><a target="_blank" id="repo-link"></a></p>
       <div id="addon-section">
         <gaia-sub-header>Affected Apps</gaia-sub-header>
         <p id="affected-apps"></div>
