@@ -118,8 +118,13 @@ export default class DetailsView extends View {
     this.installButton.classList.toggle('installed', details.installed);
     this.installButton.disabled = false;
     this.addonSection.hidden = true;
-    this.repoLink.href = details.url;
-    this.repoLink.textContent = details.url;
+    if (details.url) {
+      this.repoLink.parentElement.hidden = false;
+      this.repoLink.href = details.url;
+      this.repoLink.textContent = details.url;
+    } else {
+      this.repoLink.parentElement.hidden = true;
+    }
 
     // Addons need the affected apps section, and no Open button.
     if (details.type === 'addon') {
