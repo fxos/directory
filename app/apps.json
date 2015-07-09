@@ -125,5 +125,14 @@
       "type": "addon",
       "url": "https://github.com/john-hu/kill-all-active-apps",
       "revision": "0f6a5a76c9a9d69527b0bd751611b21aac86a117"
+    },
+    "https://SunboX.github.io/mozweekend_AddOn_Demo/manifest.webapp": {
+      "manifestURL": "https://SunboX.github.io/mozweekend_AddOn_Demo/manifest.webapp",
+      "name": "Status Bar - Temperature"",
+      "description": "Adds the current local temperature to the status bar",
+      "author": "André Fiedler",
+      "type": "addon",
+      "url": "https://github.com/SunboX/mozweekend_AddOn_Demo",
+      "revision": "cb642afdc973c72d2be3b7625e255df39427e01c"
     }
 }
