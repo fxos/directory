@@ -126,7 +126,6 @@
       "url": "https://github.com/john-hu/kill-all-active-apps",
       "revision": "0f6a5a76c9a9d69527b0bd751611b21aac86a117"
     },
-<<<<<<< HEAD
     "https://eeejay.github.io/quick-filter/manifest.webapp": {
       "manifestURL": "https://eeejay.github.io/quick-filter/manifest.webapp",
       "name": "Quick Filter",
@@ -147,9 +146,10 @@
       "url": "https://github.com/yzen/fxos-user-hub",
       "revision": "ab558b02058553d8b58fd5c3a9104462de054fe1"
     },
-    "https://SunboX.github.io/mozweekend_AddOn_Demo/manifest.webapp": {
-      "manifestURL": "https://SunboX.github.io/mozweekend_AddOn_Demo/manifest.webapp",
-      "name": "Status Bar - Temperature"",
+    "https://sunbox.github.io/mozweekend_AddOn_Demo/manifest.webapp": {
+      "manifestURL": "https://sunbox.github.io/mozweekend_AddOn_Demo/manifest.webapp",
+      "name": "Status Bar - Temperature",
+      "icon": "http://sunbox.github.io/mozweekend_AddOn_Demo/icons/icon120.png",
       "description": "Adds the current local temperature to the status bar",
       "author": "André Fiedler",
       "type": "addon",
