@@ -165,5 +165,15 @@
       "type": "addon",
       "url": "https://github.com/etiennesegonzac/snappy-twitter",
       "revision": "08b21dfd542ea431557ec10ab2316ce2e65fef5c"
+    },
+    "https://eeejay.github.io/responsive-irccloud/manifest.webapp": {
+      "manifestURL": "https://eeejay.github.io/responsive-irccloud/manifest.webapp",
+      "name": "Responsive IRCCloud",
+      "description": "Make IRCCloud web app mobile friendly",
+      "icon": "http://eeejay.github.io/responsive-irccloud/img/icons/icon128x128.png",
+      "author": "Eitan Isaacson",
+      "type": "addon",
+      "url": "https://github.com/eeejay/responsive-irccloud",
+      "revision": "9c754fd49c4ebb878c4f370acc048605f4904f33"
     }
 }
