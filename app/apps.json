@@ -125,5 +125,15 @@
       "type": "addon",
       "url": "https://github.com/john-hu/kill-all-active-apps",
       "revision": "0f6a5a76c9a9d69527b0bd751611b21aac86a117"
+    },
+    "http://eeejay.github.io/quick-filter/manifest.webapp": {
+      "manifestURL": "http://eeejay.github.io/quick-filter/manifest.webapp",
+      "name": "Quick Filter",
+      "description": "Toggle accessibility color filter settings by triple pressing the camera button",
+      "icon": "http://eeejay.github.io/quick-filter/img/icons/icon128x128.png",
+      "author": "Eitan Isaacson",
+      "type": "addon",
+      "url": "https://github.com/eeejay/quick-filter",
+      "revision": "bee2f57eafc6408a5e95d20e570c95501c57b911"
     }
 }
