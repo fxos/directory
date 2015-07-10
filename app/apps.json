@@ -155,5 +155,15 @@
       "type": "addon",
       "url": "https://github.com/SunboX/mozweekend_AddOn_Demo",
       "revision": "cb642afdc973c72d2be3b7625e255df39427e01c"
+    },
+    "https://etiennesegonzac.github.io/snappy-twitter/manifest.webapp": {
+      "manifestURL": "https://etiennesegonzac.github.io/snappy-twitter/manifest.webapp",
+      "name": "Snappy Twitter",
+      "description": "Firefox OS addon making the Twitter app snappier",
+      "icon": "https://etiennesegonzac.github.io/snappy-twitter/icon.png",
+      "author": "Etienne Segonzac",
+      "type": "addon",
+      "url": "https://github.com/etiennesegonzac/snappy-twitter",
+      "revision": "08b21dfd542ea431557ec10ab2316ce2e65fef5c"
     }
 }
