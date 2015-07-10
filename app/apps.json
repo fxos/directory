@@ -135,5 +135,15 @@
       "type": "addon",
       "url": "https://github.com/eeejay/quick-filter",
       "revision": "bee2f57eafc6408a5e95d20e570c95501c57b911"
+    },
+    "https://yzen.github.io/fxos-user-hub/manifest.webapp": {
+      "manifestURL": "https://yzen.github.io/fxos-user-hub/manifest.webapp",
+      "name": "User Hub",
+      "icon": "https://yzen.github.io/fxos-user-hub/icons/user.png",
+      "description": "User hub for user preferences",
+      "author": "Yura Zenevich",
+      "type": "addon",
+      "url": "https://github.com/yzen/fxos-user-hub",
+      "revision": "ab558b02058553d8b58fd5c3a9104462de054fe1"
     }
 }
