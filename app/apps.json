@@ -175,5 +175,15 @@
       "type": "addon",
       "url": "https://github.com/eeejay/responsive-irccloud",
       "revision": "9c754fd49c4ebb878c4f370acc048605f4904f33"
+    },
+    "https://john-hu.github.io/fxos-text-battery/manifest.webapp": {
+      "manifestURL": "https://john-hu.github.io/fxos-text-battery/manifest.webapp",
+      "name": "Text battery level",
+      "description": "Display battery level in text",
+      "icon": "http://john-hu.github.io/fxos-text-battery/icons/128.png",
+      "author": "John Hu",
+      "type": "addon",
+      "url": "https://github.com/john-hu/fxos-text-battery",
+      "revision": "82ec3d12a3ea1f740b5e4d989e1ffb2ce73c85dd"
     }
 }
