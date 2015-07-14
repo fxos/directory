@@ -179,7 +179,7 @@
     "https://arcturus.github.io/more-icons-addon/manifest.webapp": {
       "manifestURL": "https://arcturus.github.io/more-icons-addon/manifest.webapp",
       "name": "Bookmarks more-icons",
-      "description": "Get more icon choices when adding a webpage to your homescreen. When saving a bookmar, click on the icon to show alternatives (if available)",
+      "description": "Get more icon choices when adding a webpage to your homescreen. When saving a bookmark, click on the icon to show alternatives (if available)",
       "icon": "https://arcturus.github.io/more-icons-addon/icon.png",
       "author": "Francisco Jordano",
       "type": "addon",
