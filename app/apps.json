@@ -175,5 +175,15 @@
       "type": "addon",
       "url": "https://github.com/eeejay/responsive-irccloud",
       "revision": "9c754fd49c4ebb878c4f370acc048605f4904f33"
+    },
+    "https://fwenzel.github.io/fxos-addon-keyboard-show-case/manifest.webapp": {
+      "manifestURL": "https://fwenzel.github.io/fxos-addon-keyboard-show-case/manifest.webapp",
+      "name": "Keyboard - Show Case",
+      "description": "Shows lower/uppercase characters on the keyboard based on Shift key status",
+      "icon": "https://fwenzel.github.io/fxos-addon-keyboard-show-case/icons/keyboard-128.png",
+      "author": "Fred Wenzel",
+      "type": "addon",
+      "url": "https://github.com/fwenzel/fxos-addon-keyboard-show-case",
+      "revision": "7ac4944fbc21ce312ffbb1b35b83372d2bf51cf6"
     }
 }
