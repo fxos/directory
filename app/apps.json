@@ -175,5 +175,15 @@
       "type": "addon",
       "url": "https://github.com/eeejay/responsive-irccloud",
       "revision": "9c754fd49c4ebb878c4f370acc048605f4904f33"
+    },
+    "https://xeonchen.github.io/fxos-line-fixer/manifest.webapp": {
+      "manifestURL": "https://xeonchen.github.io/fxos-line-fixer/manifest.webapp",
+      "name": "LINE Fixer",
+      "description": "Fix LINE UI issue(s) in FxOS",
+      "icon": "https://xeonchen.github.io/fxos-line-fixer/icons/128.png",
+      "author": "Liang-Heng Chen",
+      "type": "addon",
+      "url": "https://github.com/xeonchen/fxos-line-fixer",
+      "revision": "4c93314c2fa985aa41316f9423f06090dec059d4"
     }
 }
