@@ -175,5 +175,15 @@
       "type": "addon",
       "url": "https://github.com/eeejay/responsive-irccloud",
       "revision": "9c754fd49c4ebb878c4f370acc048605f4904f33"
+    },
+    "http://codingfree.github.io/IMGUR-Screenshot/manifest.webapp": {
+      "manifestURL": "http://codingfree.github.io/IMGUR-Screenshot/manifest.webapp",
+      "name": "IMGUR Screenshots",
+      "description": "Send screenshots automatically to IMGUR.",
+      "icon": "https://raw.githubusercontent.com/CodingFree/IMGUR-Screenshot/master/style/icons/128.png",
+      "author": "Adrian Crespo and Giovanny Gongora",
+      "type": "addon",
+      "url": "https://github.com/CodingFree/IMGUR-Screenshot/",
+      "revision": "ff4285751d05b2a422ae2ab2e207ed9ade673eac"
     }
 }
