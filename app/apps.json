@@ -185,5 +185,15 @@
       "type": "addon",
       "url": "https://github.com/john-hu/fxos-text-battery",
       "revision": "82ec3d12a3ea1f740b5e4d989e1ffb2ce73c85dd"
+    },
+    "https://shinglyu.github.io/fxos-back-button/manifest.webapp": {
+      "manifestURL": "https://shinglyu.github.io/fxos-back-button/manifest.webapp",
+      "name": "Back Button",
+      "description": "Add back button (and show window button) to the software home button bar",
+      "icon": "https://shinglyu.github.io/fxos-back-button/icons/icon.png",
+      "author": "Shing Lyu",
+      "type": "addon",
+      "url": "https://github.com/shinglyu/fxos-back-button",
+      "revision": "092415e6c5c44eea3d6bfaccf2cbaf1f9dc3aa73"
     }
 }
