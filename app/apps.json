@@ -195,5 +195,15 @@
       "type": "addon",
       "url": "https://github.com/shinglyu/fxos-back-button",
       "revision": "092415e6c5c44eea3d6bfaccf2cbaf1f9dc3aa73"
+    },
+    "https://xeonchen.github.io/fxos-line-fixer/manifest.webapp": {
+      "manifestURL": "https://xeonchen.github.io/fxos-line-fixer/manifest.webapp",
+      "name": "LINE Fixer",
+      "description": "Fix LINE UI issue(s) in FxOS",
+      "icon": "https://xeonchen.github.io/fxos-line-fixer/icons/128.png",
+      "author": "Liang-Heng Chen",
+      "type": "addon",
+      "url": "https://github.com/xeonchen/fxos-line-fixer",
+      "revision": "4c93314c2fa985aa41316f9423f06090dec059d4"
     }
 }
