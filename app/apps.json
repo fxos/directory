@@ -205,5 +205,14 @@
       "type": "addon",
       "url": "https://github.com/xeonchen/fxos-line-fixer",
       "revision": "4c93314c2fa985aa41316f9423f06090dec059d4"
+    },
+    "https://lmorchard.github.io/fxos-addon-quartz-full-story-fix/manifest.webapp": {
+      "manifestURL": "https://lmorchard.github.io/fxos-addon-quartz-full-story-fix/manifest.webapp",
+      "name": "Browser - qz.com - Remove 'Read full story' button",
+      "description": "Removes the 'Read full story' button on Quartz (qz.com) articles that does not reveal the entire content for long stories",
+      "author": "Les Orchard",
+      "type": "addon",
+      "url": "https://github.com/lmorchard/fxos-addon-quartz-full-story-fix",
+      "revision": "059c77de3500a974216473a4b6e64b55c412fe6e"
     }
 }
