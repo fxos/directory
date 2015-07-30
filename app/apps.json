@@ -215,5 +215,15 @@
       "type": "addon",
       "url": "https://arcturus.github.io/more-icons-addon/manifest.webapp",
       "revision": "8b7bdbbf676d021e873c922d6092766d486eaf2b"
+    },
+    "https://elin-moco.github.io/fxos-addon-sound-switch/manifest.webapp": {
+      "manifestURL": "https://elin-moco.github.io/fxos-addon-sound-switch/manifest.webapp",
+      "name": "Sound Switch",
+      "description": "Toggle sounds on and off in utilities tray.",
+      "icon": "https://elin-moco.github.io/fxos-addon-sound-switch/icons/sound.png",
+      "author": "Eddie Lin",
+      "type": "addon",
+      "url": "https://github.com/elin-moco/fxos-addon-sound-switch",
+      "revision": "99fc455177a4ebcadf8853f75f9f3964dc40562d"
     }
 }
