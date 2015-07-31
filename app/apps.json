@@ -148,13 +148,13 @@
     },
     "https://sunbox.github.io/mozweekend_AddOn_Demo/manifest.webapp": {
       "manifestURL": "https://sunbox.github.io/mozweekend_AddOn_Demo/manifest.webapp",
-      "name": "Status Bar - Temperature",
+      "name": "Status Bar Temperature",
       "icon": "http://sunbox.github.io/mozweekend_AddOn_Demo/icons/icon120.png",
       "description": "Adds the current local temperature to the status bar",
       "author": "André Fiedler",
       "type": "addon",
       "url": "https://github.com/SunboX/mozweekend_AddOn_Demo",
-      "revision": "cb642afdc973c72d2be3b7625e255df39427e01c"
+      "revision": "1af8e706cd9496487a38461c04c2c2352e298376"
     },
     "https://etiennesegonzac.github.io/snappy-twitter/manifest.webapp": {
       "manifestURL": "https://etiennesegonzac.github.io/snappy-twitter/manifest.webapp",
