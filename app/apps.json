@@ -215,5 +215,15 @@
       "type": "addon",
       "url": "https://arcturus.github.io/more-icons-addon/manifest.webapp",
       "revision": "8b7bdbbf676d021e873c922d6092766d486eaf2b"
+    },
+    "https://elin-moco.github.io/fxos-addon-big-unlocker/manifest.webapp": {
+      "manifestURL": "https://elin-moco.github.io/fxos-addon-big-unlocker/manifest.webapp",
+      "name": "Bigger Unlocker",
+      "description": "Enlarges the unlocker on lockscreen.",
+      "icon": "https://elin-moco.github.io/fxos-addon-big-unlocker/icons/unlock.png",
+      "author": "Eddie Lin",
+      "type": "addon",
+      "url": "https://github.com/elin-moco/fxos-addon-big-unlocker",
+      "revision": "f80e4ec95a1e02e762c0e0dacd791f9ec217ecec"
     }
 }
