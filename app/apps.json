@@ -255,5 +255,15 @@
       "type": "addon",
       "url": "https://github.com/elin-moco/fxos-addon-draggable-home-btn",
       "revision": "b556985d5dac8144b38b9daff810113e8276ff8c"
+    },
+    "https://elin-moco.github.io/fxos-addon-yellow-mask/manifest.webapp": {
+      "manifestURL": "https://elin-moco.github.io/fxos-addon-yellow-mask/manifest.webapp",
+      "name": "Yellow Mask",
+      "description": "Adds a yellow mask to protect your eyes.",
+      "icon": "https://elin-moco.github.io/fxos-addon-yellow-mask/icons/glasses.png",
+      "author": "Eddie Lin",
+      "type": "addon",
+      "url": "https://github.com/elin-moco/fxos-addon-yellow-mask",
+      "revision": "19ba27c113305ca38d26cf723a936bd6ef194dba"
     }
 }
