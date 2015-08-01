@@ -215,5 +215,15 @@
       "type": "addon",
       "url": "https://arcturus.github.io/more-icons-addon/manifest.webapp",
       "revision": "8b7bdbbf676d021e873c922d6092766d486eaf2b"
+    },
+    "https://hobinjk.github.io/minimal-home-button/manifest.webapp": {
+      "manifestURL": "https://hobinjk.github.io/minimal-home-button/manifest.webapp",
+      "name": "Minimal Home Button",
+      "description": "Home buttons should be barely seen and never heard.",
+      "icon": "https://hobinjk.github.io/minimal-home-button/icons/128.png",
+      "author": "James Hobin",
+      "type": "addon",
+      "url": "https://github.com/hobinjk/minimal-home-button",
+      "revision": "3fd1000abb982d983828b8d8494b1cab38186549"
     }
 }
