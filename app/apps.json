@@ -245,5 +245,15 @@
       "type": "addon",
       "url": "https://github.com/elin-moco/fxos-addon-big-unlocker",
       "revision": "f80e4ec95a1e02e762c0e0dacd791f9ec217ecec"
+    },
+    "https://elin-moco.github.io/fxos-addon-draggable-home-btn/manifest.webapp": {
+      "manifestURL": "https://elin-moco.github.io/fxos-addon-draggable-home-btn/manifest.webapp",
+      "name": "Draggable Home Button",
+      "description": "Adds a draggable home button to the screen.",
+      "icon": "https://elin-moco.github.io/fxos-addon-draggable-home-btn/icons/home.png",
+      "author": "Eddie Lin",
+      "type": "addon",
+      "url": "https://github.com/elin-moco/fxos-addon-draggable-home-btn",
+      "revision": "b556985d5dac8144b38b9daff810113e8276ff8c"
     }
 }
