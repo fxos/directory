@@ -225,5 +225,15 @@
       "type": "addon",
       "url": "https://github.com/hobinjk/minimal-home-button",
       "revision": "3fd1000abb982d983828b8d8494b1cab38186549"
+    },
+    "https://elin-moco.github.io/fxos-addon-sound-switch/manifest.webapp": {
+      "manifestURL": "https://elin-moco.github.io/fxos-addon-sound-switch/manifest.webapp",
+      "name": "Sound Switch",
+      "description": "Toggle sounds on and off in utilities tray. Only media volume and ringtones/notifications volume would be affected.",
+      "icon": "https://elin-moco.github.io/fxos-addon-sound-switch/icons/sound.png",
+      "author": "Eddie Lin",
+      "type": "addon",
+      "url": "https://github.com/elin-moco/fxos-addon-sound-switch",
+      "revision": "7c78833d9e9ddb15fd65225bb08593232719efc4"
     }
 }
