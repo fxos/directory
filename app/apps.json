@@ -265,5 +265,15 @@
       "type": "addon",
       "url": "https://github.com/elin-moco/fxos-addon-yellow-mask",
       "revision": "19ba27c113305ca38d26cf723a936bd6ef194dba"
+    },
+    "https://elin-moco.github.io/ble-explorer/manifest.webapp": {
+      "manifestURL": "https://elin-moco.github.io/ble-explorer/manifest.webapp",
+      "name": "BLE Explorer",
+      "description": "Useful tool to explore/access services/characteristics on your BLE device.",
+      "icon": "https://elin-moco.github.io/ble-explorer/img/icons/icon_128.png",
+      "author": "Eddie Lin",
+      "type": "packaged",
+      "url": "https://github.com/elin-moco/ble-explorer",
+      "revision": "810a603ce7be1f9dda66ed75870afc6b3feb30a2"
     }
 }
