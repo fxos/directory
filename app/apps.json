@@ -285,5 +285,35 @@
       "type": "hosted",
       "url": "https://github.com/elin-moco/ble-explorer",
       "revision": "810a603ce7be1f9dda66ed75870afc6b3feb30a2"
+    },
+    "https://lmorchard.github.io/fxos-addon-messages-bigger-send-button/manifest.webapp": {
+      "manifestURL": "https://lmorchard.github.io/fxos-addon-messages-bigger-send-button/manifest.webapp",
+      "name": "Messages - Larger send and attachment buttons",
+      "description": "Makes attachment and send buttons larger and easier to tap",
+      "icon": "http://directory.fxosapps.org/img/sms.png",
+      "author": "Les Orchard",
+      "type": "addon",
+      "url": "https://github.com/lmorchard/fxos-addon-messages-bigger-send-button",
+      "revision": "2d7e81f219e55d71532fe927914b30d6c07cc3e0"
+    },
+    "https://lmorchard.github.io/fxos-addon-messages-enter-to-send/manifest.webapp": {
+      "manifestURL": "https://lmorchard.github.io/fxos-addon-messages-enter-to-send/manifest.webapp",
+      "name": "Messages - Enter to Send",
+      "description": "Enter key sends a message.",
+      "icon": "http://directory.fxosapps.org/img/sms.png",
+      "author": "Les Orchard",
+      "type": "addon",
+      "url": "https://github.com/lmorchard/fxos-addon-messages-enter-to-send",
+      "revision": "f7550c7c97b46d7e5bf96a7d2ebe95ea0157614b"
+    },
+    "https://lmorchard.github.io/fxos-addon-messages-smaller-message-font/manifest.webapp": {
+      "manifestURL": "https://lmorchard.github.io/fxos-addon-messages-smaller-message-font/manifest.webapp",
+      "name": "Messages - Smaller message text",
+      "icon": "http://directory.fxosapps.org/img/sms.png",
+      "description": "Smaller text size for messages so that more fit on a high resolution screen.",
+      "author": "Les Orchard",
+      "type": "addon",
+      "url": "https://github.com/lmorchard/fxos-addon-messages-smaller-message-font",
+      "revision": "fcf952c8293e48a39c0a2a95c808340cbb3ef1b0"
     }
 }
