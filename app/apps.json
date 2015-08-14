@@ -315,5 +315,15 @@
       "type": "addon",
       "url": "https://github.com/lmorchard/fxos-addon-messages-smaller-message-font",
       "revision": "fcf952c8293e48a39c0a2a95c808340cbb3ef1b0"
+    },
+    "https://justindarc.github.io/fxos-animated-clock/manifest.webapp": {
+      "manifestURL": "https://justindarc.github.io/fxos-animated-clock/manifest.webapp",
+      "name": "Live Clock Icon",
+      "icon": "https://justindarc.github.io/fxos-animated-clock/icons/clock_284.png",
+      "description": "Add-on for animating the Clock icon on the homescreen",
+      "author": "Justin D'Arcangelo",
+      "type": "addon",
+      "url": "https://github.com/justindarc/fxos-animated-clock",
+      "revision": "955cf91115a1a7dc4baf1ae6d6f9166bf3184322"
     }
 }
