@@ -335,5 +335,15 @@
       "type": "addon",
       "url": "https://github.com/novia713/monchi-dificil",
       "revision": "9d706437a2b7364b6bd5bcf3ab4c34940210dba7"
+    },
+    "http://novia713.github.io/monchi-dificil/manifest.webapp": {
+      "manifestURL": "http://novia713.github.io/monchi-dificil/manifest.webapp",
+      "name": "Difficult mode for Monchi game",
+      "icon": "http://novia713.github.io/monchi-dificil/icons/orange-monchi128.png",
+      "description": "Add-on for Monchi game, it makes available a difficult mode",
+      "author": "Leandro",
+      "type": "addon",
+      "url": "https://github.com/novia713/monchi-dificil",
+      "revision": "1fb5e0c93c928f6577e53dd14f2548fa7c85e816"
     }
 }
