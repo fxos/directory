@@ -3,8 +3,8 @@ import { Model } from 'components/fxos-mvc/dist/mvc';
 export default class ListModel extends Model {
   getAppList() {
     return new Promise((resolve, reject) => {
-      var localApps = this.loadApps('/apps.json');
-      var remoteApps = this.loadApps('http://directory.fxosapps.org/apps.json');
+      var localApps = this.loadApps('/apps-v2.json');
+      var remoteApps = this.loadApps('http://directory.fxosapps.org/apps-v2.json');
       Promise.all([localApps, remoteApps]).then(
       sources => {
         localApps = sources[0];
