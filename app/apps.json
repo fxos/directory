@@ -326,10 +326,10 @@
       "url": "https://github.com/justindarc/fxos-animated-clock",
       "revision": "955cf91115a1a7dc4baf1ae6d6f9166bf3184322"
     },
-    "http://novia713.github.io/monchi-dificil/manifest.webapp": {
-      "manifestURL": "http://novia713.github.io/monchi-dificil/manifest.webapp",
+    "https://novia713.github.io/monchi-dificil/manifest.webapp": {
+      "manifestURL": "https://novia713.github.io/monchi-dificil/manifest.webapp",
       "name": "Difficult mode for Monchi game",
-      "icon": "http://novia713.github.io/monchi-dificil/icons/orange-monchi128.png",
+      "icon": "https://novia713.github.io/monchi-dificil/icons/orange-monchi128.png",
       "description": "Add-on for Monchi game, it makes available a difficult mode",
       "author": "Leandro",
       "type": "addon",
