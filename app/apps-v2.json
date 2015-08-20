@@ -46,5 +46,15 @@
       "type": "addon",
       "url": "https://github.com/mikehenrty/fxos-shb-plus",
       "revision": "9b4ed3b83735a3fcd764b317499efde5b1e64f68"
+    },
+    "https://callahad.github.io/fxos-tabswitcher-addon/src/update.webapp": {
+      "manifestURL": "https://callahad.github.io/fxos-tabswitcher-addon/src/update.webapp",
+      "name": "Tab Switcher Shortcut",
+      "description": "Adds a button to the browser that immediately opens the tab switcher",
+      "icon": "https://callahad.github.io/fxos-tabswitcher-addon/src/icon-128x128.png",
+      "author": "Dan Callahan",
+      "type": "addon",
+      "url": "https://github.com/callahad/fxos-tabswitcher-addon",
+      "revision": "b70a8220bcf1cf03323997e1c9c1e5f4a779b791"
     }
 }
