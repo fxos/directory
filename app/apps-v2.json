@@ -66,5 +66,15 @@
       "type": "addon",
       "url": "https://github.com/SunboX/fxos_addon_Status_Bar_Temperature",
       "revision": "4adb6c41af0dd7c79ed704047a27136fce5c92d5"
+    },
+    "http://eeejay.github.io/responsive-irccloud/update.webapp": {
+      "manifestURL": "http://eeejay.github.io/responsive-irccloud/update.webapp",
+      "name": "Responsive IRCCloud",
+      "description": "Make IRCCloud web app mobile friendly",
+      "icon": "http://eeejay.github.io/responsive-irccloud/img/icons/icon128x128.png",
+      "author": "Eitan Isaacson",
+      "type": "addon",
+      "url": "https://github.com/eeejay/responsive-irccloud",
+      "revision": "2344f0987c2db0b6dc46489d0df94fb5d6bea6fb"
     }
 }
