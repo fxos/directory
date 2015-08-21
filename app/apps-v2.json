@@ -46,5 +46,15 @@
       "type": "addon",
       "url": "https://github.com/mikehenrty/fxos-shb-plus",
       "revision": "9b4ed3b83735a3fcd764b317499efde5b1e64f68"
+    },
+    "https://sunbox.github.io/fxos_addon_Status_Bar_Temperature/update.webapp": {
+      "manifestURL": "https://sunbox.github.io/fxos_addon_Status_Bar_Temperature/update.webapp",
+      "name": "Status Bar Temperature",
+      "icon": "http://sunbox.github.io/fxos_addon_Status_Bar_Temperature/src/icons/icon120.png",
+      "description": "Adds the current local temperature to the status bar",
+      "author": "André Fiedler",
+      "type": "addon",
+      "url": "https://github.com/SunboX/fxos_addon_Status_Bar_Temperature",
+      "revision": "4adb6c41af0dd7c79ed704047a27136fce5c92d5"
     }
 }
