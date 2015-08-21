@@ -7,7 +7,7 @@ This is a directory of apps and add-ons for customizing Firefox OS.
 Here's how to submit your app or add-on to the Hackerplace:
 
 1. Fork the Hackerplace repository: https://github.com/fxos/directory.
-1. In your fork, edit the [App List](https://github.com/fxos/directory/blob/master/app/apps.json) by adding an item with the follow data:
+1. In your fork, edit the [App List](https://github.com/fxos/directory/blob/master/app/apps-v2.json) by adding an item with the follow data:
   * **manifestURL**: the URL at which your app/add-on's manifest resides
   * **name**: the name of you app/add-on shown in the hackerplace list
   * **icon**: the URL of your icon, if you want it can be relative, and you can add your icon [here](https://github.com/fxos/directory/tree/master/app/img/app_icons)
