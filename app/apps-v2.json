@@ -66,5 +66,15 @@
       "type": "addon",
       "url": "https://github.com/SunboX/fxos_addon_Status_Bar_Temperature",
       "revision": "4adb6c41af0dd7c79ed704047a27136fce5c92d5"
+    },
+    "https://www.codingfree.com/addons/IMGUR/update.webapp": {
+      "manifestURL": "https://www.codingfree.com/addons/IMGUR/update.webapp",
+      "name": "Status Bar Temperature",
+      "icon": "http://www.codingfree.com/addons/IMGUR/style/icons/128.png",
+      "description": "Send screenshots automatically to IMGUR",
+      "author": "Adrian & Gioyik",
+      "type": "addon",
+      "url": "https://codingfree.com/addons/IMGUR/",
+      "revision": "c47fec31d41cd526f7c10c94730ac8fa1c2489b2"
     }
 }
