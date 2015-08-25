@@ -1,5 +1,7 @@
 import { Model } from 'components/fxos-mvc/dist/mvc';
 
+const DEBUG = 0;
+
 export default class ListModel extends Model {
   getAppList() {
     return new Promise((resolve, reject) => {
@@ -12,7 +14,11 @@ export default class ListModel extends Model {
 
         // Try to fetch the remote app list, but if it fails, use the packaged
         // one instead.
-        resolve(Object.keys(remoteApps).length ? remoteApps : localApps);
+        if (DEBUG || Object.keys(remoteApps).length < 1) {
+          resolve(localApps);
+        } else {
+          resolve(remoteApps);
+        }
       });
     });
   }
