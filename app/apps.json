@@ -325,5 +325,14 @@
       "type": "addon",
       "url": "https://github.com/justindarc/fxos-animated-clock",
       "revision": "955cf91115a1a7dc4baf1ae6d6f9166bf3184322"
+    },
+    "https://xeonchen.github.io/fxos-quick-hotspot/manifest.webapp": {
+      "manifestURL": "https://xeonchen.github.io/fxos-quick-hotspot/manifest.webapp",
+      "name": "Wi-Fi HotSpot Shortcut",
+      "description": "Adds a button to switch Wi-Fi hotspot on/off",
+      "author": "Liang-Heng Chen",
+      "type": "addon",
+      "url": "https://github.com/xeonchen/fxos-quick-hotspot",
+      "revision": "659296fe44bb27d4fdf6423921c41d1b6e559340"
     }
 }

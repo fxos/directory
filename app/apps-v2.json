@@ -66,5 +66,14 @@
       "type": "addon",
       "url": "https://github.com/SunboX/fxos_addon_Status_Bar_Temperature",
       "revision": "4adb6c41af0dd7c79ed704047a27136fce5c92d5"
+    },
+    "https://xeonchen.github.io/fxos-quick-hotspot/update.webapp": {
+      "manifestURL": "https://xeonchen.github.io/fxos-quick-hotspot/update.webapp",
+      "name": "Wi-Fi HotSpot Shortcut",
+      "description": "Adds a button to switch Wi-Fi hotspot on/off",
+      "author": "Liang-Heng Chen",
+      "type": "addon",
+      "url": "https://github.com/xeonchen/fxos-quick-hotspot",
+      "revision": "659296fe44bb27d4fdf6423921c41d1b6e559340"
     }
 }
