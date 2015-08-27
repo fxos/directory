@@ -266,16 +266,6 @@
       "url": "https://github.com/elin-moco/fxos-addon-yellow-mask",
       "revision": "19ba27c113305ca38d26cf723a936bd6ef194dba"
     },
-    "https://codingfree.com/addons/IMGUR/manifest.webapp": {
-      "manifestURL": "https://codingfree.com/addons/IMGUR/manifest.webapp",
-      "name": "IMGUR Screenshots",
-      "description": "Send screenshots automatically to IMGUR.",
-      "icon": "https://codingfree.com/addons/IMGUR/style/icons/128.png",
-      "author": "Adrian Crespo and Giovanny Gongora",
-      "type": "addon",
-      "url": "https://codingfree.com/addons/IMGUR/",
-      "revision": "b90a696900f558809785861daa250951e15cb232"
-    },
     "https://elin-moco.github.io/ble-explorer/manifest.webapp": {
       "manifestURL": "https://elin-moco.github.io/ble-explorer/manifest.webapp",
       "name": "BLE Explorer",
