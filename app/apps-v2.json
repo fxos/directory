@@ -69,7 +69,7 @@
     },
     "https://www.codingfree.com/addons/IMGUR/update.webapp": {
       "manifestURL": "https://www.codingfree.com/addons/IMGUR/update.webapp",
-      "name": "Status Bar Temperature",
+      "name": "IMGUR Screenshots",
       "icon": "http://www.codingfree.com/addons/IMGUR/style/icons/128.png",
       "description": "Send screenshots automatically to IMGUR",
       "author": "Adrian & Gioyik",
