@@ -76,5 +76,65 @@
       "type": "addon",
       "url": "https://codingfree.com/addons/IMGUR/",
       "revision": "c47fec31d41cd526f7c10c94730ac8fa1c2489b2"
+    },
+    "https://elin-moco.github.io/fxos-addon-sound-switch/update.webapp": {
+      "manifestURL": "https://elin-moco.github.io/fxos-addon-sound-switch/update.webapp",
+      "name": "Sound Switch",
+      "description": "Toggle sounds on and off in utilities tray. Only media volume and ringtones/notifications volume would be affected.",
+      "icon": "https://elin-moco.github.io/fxos-addon-sound-switch/icons/sound.png",
+      "author": "Eddie Lin",
+      "type": "addon",
+      "url": "https://github.com/elin-moco/fxos-addon-sound-switch",
+      "revision": "e1bb89b127954f0494063d08fd4c7bdb87cfdde9"
+    },
+    "https://elin-moco.github.io/fxos-addon-big-unlocker/update.webapp": {
+      "manifestURL": "https://elin-moco.github.io/fxos-addon-big-unlocker/update.webapp",
+      "name": "Bigger Unlocker",
+      "description": "Enlarges the unlocker on lockscreen.",
+      "icon": "https://elin-moco.github.io/fxos-addon-big-unlocker/icons/unlock.png",
+      "author": "Eddie Lin",
+      "type": "addon",
+      "url": "https://github.com/elin-moco/fxos-addon-big-unlocker",
+      "revision": "334da9ddb2066941f7a14afb3567d320d4ed9093"
+    },
+    "https://elin-moco.github.io/fxos-addon-draggable-home-btn/update.webapp": {
+      "manifestURL": "https://elin-moco.github.io/fxos-addon-draggable-home-btn/update.webapp",
+      "name": "Draggable Home Button",
+      "description": "Adds a draggable home button to the screen.",
+      "icon": "https://elin-moco.github.io/fxos-addon-draggable-home-btn/icons/home.png",
+      "author": "Eddie Lin",
+      "type": "addon",
+      "url": "https://github.com/elin-moco/fxos-addon-draggable-home-btn",
+      "revision": "7cbba6d432b8636f588f094ec8e21eb69143cefc"
+    },
+    "https://elin-moco.github.io/fxos-addon-yellow-mask/update.webapp": {
+      "manifestURL": "https://elin-moco.github.io/fxos-addon-update-mask/manifest.webapp",
+      "name": "Yellow Mask",
+      "description": "Adds a yellow mask to protect your eyes.",
+      "icon": "https://elin-moco.github.io/fxos-addon-yellow-mask/icons/glasses.png",
+      "author": "Eddie Lin",
+      "type": "addon",
+      "url": "https://github.com/elin-moco/fxos-addon-yellow-mask",
+      "revision": "eb93a3d23bc762370a715c9d12c563b3e86fa68f"
+    },
+    "https://elin-moco.github.io/fxos-addon-nfc-switch/update.webapp": {
+      "manifestURL": "https://elin-moco.github.io/fxos-addon-nfc-switch/update.webapp",
+      "name": "NFC Switch",
+      "description": "Toggle NFC on and off in utilities tray.",
+      "icon": "https://elin-moco.github.io/fxos-addon-nfc-switch/icons/nfc.png",
+      "author": "Eddie Lin",
+      "type": "addon",
+      "url": "https://github.com/elin-moco/fxos-addon-nfc-switch",
+      "revision": "ea910278f0fa7ccec27ec3f157aa74316f74f2cf"
+    },
+    "https://elin-moco.github.io/ble-explorer/manifest.webapp": {
+      "manifestURL": "https://elin-moco.github.io/ble-explorer/manifest.webapp",
+      "name": "BLE Explorer",
+      "description": "Useful tool to explore/access services/characteristics on your BLE device.",
+      "icon": "https://elin-moco.github.io/ble-explorer/img/icons/icon_128.png",
+      "author": "Eddie Lin",
+      "type": "hosted",
+      "url": "https://github.com/elin-moco/ble-explorer",
+      "revision": "810a603ce7be1f9dda66ed75870afc6b3feb30a2"
     }
 }
