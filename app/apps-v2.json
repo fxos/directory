@@ -76,5 +76,15 @@
       "type": "addon",
       "url": "https://codingfree.com/addons/IMGUR/",
       "revision": "c47fec31d41cd526f7c10c94730ac8fa1c2489b2"
+    },
+    "https://mikehenrty.github.io/kill-all-active-apps/update.webapp": {
+      "manifestURL": "https://mikehenrty.github.io/kill-all-active-apps/update.webapp",
+      "name": "Kill Actives",
+      "description": "Add a button to kill all active apps",
+      "icon": "http://mikehenrty.github.io/kill-all-active-apps/icons/128.png",
+      "author": "John Hu",
+      "type": "addon",
+      "url": "https://github.com/john-hu/kill-all-active-apps",
+      "revision": "1da69da899791e1e337ece9bc3c25f51182c17c8"
     }
 }
