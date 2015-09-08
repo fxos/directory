@@ -85,7 +85,7 @@
       "author": "Eddie Lin",
       "type": "addon",
       "url": "https://github.com/elin-moco/fxos-addon-sound-switch",
-      "revision": "e1bb89b127954f0494063d08fd4c7bdb87cfdde9"
+      "revision": "3e136d786390fcbd874596693646c708c44568f5"
     },
     "https://elin-moco.github.io/fxos-addon-big-unlocker/update.webapp": {
       "manifestURL": "https://elin-moco.github.io/fxos-addon-big-unlocker/update.webapp",
@@ -95,7 +95,7 @@
       "author": "Eddie Lin",
       "type": "addon",
       "url": "https://github.com/elin-moco/fxos-addon-big-unlocker",
-      "revision": "334da9ddb2066941f7a14afb3567d320d4ed9093"
+      "revision": "bffe63cce5d05c133b6531cae5416f5826b5c4eb"
     },
     "https://elin-moco.github.io/fxos-addon-draggable-home-btn/update.webapp": {
       "manifestURL": "https://elin-moco.github.io/fxos-addon-draggable-home-btn/update.webapp",
@@ -105,7 +105,7 @@
       "author": "Eddie Lin",
       "type": "addon",
       "url": "https://github.com/elin-moco/fxos-addon-draggable-home-btn",
-      "revision": "7cbba6d432b8636f588f094ec8e21eb69143cefc"
+      "revision": "0526c2e4f0b5407098dc43f0f0adfc43fe9d75ab"
     },
     "https://elin-moco.github.io/fxos-addon-yellow-mask/update.webapp": {
       "manifestURL": "https://elin-moco.github.io/fxos-addon-update-mask/manifest.webapp",
@@ -115,7 +115,7 @@
       "author": "Eddie Lin",
       "type": "addon",
       "url": "https://github.com/elin-moco/fxos-addon-yellow-mask",
-      "revision": "eb93a3d23bc762370a715c9d12c563b3e86fa68f"
+      "revision": "6eaefc3b8e9450d19841e4c1e8ad6b21f59e325f"
     },
     "https://elin-moco.github.io/fxos-addon-nfc-switch/update.webapp": {
       "manifestURL": "https://elin-moco.github.io/fxos-addon-nfc-switch/update.webapp",
@@ -125,7 +125,7 @@
       "author": "Eddie Lin",
       "type": "addon",
       "url": "https://github.com/elin-moco/fxos-addon-nfc-switch",
-      "revision": "ea910278f0fa7ccec27ec3f157aa74316f74f2cf"
+      "revision": "926ceb55d142fa474ca360ca17beafa894988611"
     },
     "https://elin-moco.github.io/ble-explorer/manifest.webapp": {
       "manifestURL": "https://elin-moco.github.io/ble-explorer/manifest.webapp",
