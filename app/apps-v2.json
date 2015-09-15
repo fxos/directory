@@ -86,5 +86,15 @@
       "type": "addon",
       "url": "https://github.com/john-hu/kill-all-active-apps",
       "revision": "1da69da899791e1e337ece9bc3c25f51182c17c8"
+    },
+    "https://shinglyu.github.io/fxos-unread-icon/update.webapp": {
+      "manifestURL": "https://shinglyu.github.io/fxos-unread-icon/update.webapp",
+      "name": "Unread Icon",
+      "description": "Add unread message count to homescreen icons",
+      "icon": "https://shinglyu.github.io/fxos-unread-icon/icons/icon-128.png",
+      "author": "Shing Lyu",
+      "type": "addon",
+      "url": "https://github.com/shinglyu/fxos-unread-icon",
+      "revision": "9fe622bb14381aea6613c17dbcf14641925a8e52"
     }
 }

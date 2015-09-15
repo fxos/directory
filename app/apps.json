@@ -315,5 +315,15 @@
       "type": "addon",
       "url": "https://github.com/justindarc/fxos-animated-clock",
       "revision": "955cf91115a1a7dc4baf1ae6d6f9166bf3184322"
+    },
+    "https://shinglyu.github.io/fxos-unread-icon/manifest.webapp": {
+      "manifestURL": "https://shinglyu.github.io/fxos-unread-icon/manifest.webapp",
+      "name": "Unread Icons",
+      "description": "Add unread message count to homescreen icons",
+      "icon": "https://shinglyu.github.io/fxos-unread-icon/icons/icon-128.png",
+      "author": "Shing Lyu",
+      "type": "addon",
+      "url": "https://github.com/shinglyu/fxos-unread-icon",
+      "revision": "9fe622bb14381aea6613c17dbcf14641925a8e52"
     }
 }
