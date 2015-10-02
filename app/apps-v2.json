@@ -117,16 +117,6 @@
       "url": "https://github.com/elin-moco/fxos-addon-draggable-home-btn",
       "revision": "0526c2e4f0b5407098dc43f0f0adfc43fe9d75ab"
     },
-    "https://elin-moco.github.io/fxos-addon-yellow-mask/update.webapp": {
-      "manifestURL": "https://elin-moco.github.io/fxos-addon-update-mask/manifest.webapp",
-      "name": "Yellow Mask",
-      "description": "Adds a yellow mask to protect your eyes.",
-      "icon": "https://elin-moco.github.io/fxos-addon-yellow-mask/icons/glasses.png",
-      "author": "Eddie Lin",
-      "type": "addon",
-      "url": "https://github.com/elin-moco/fxos-addon-yellow-mask",
-      "revision": "6eaefc3b8e9450d19841e4c1e8ad6b21f59e325f"
-    },
     "https://elin-moco.github.io/fxos-addon-nfc-switch/update.webapp": {
       "manifestURL": "https://elin-moco.github.io/fxos-addon-nfc-switch/update.webapp",
       "name": "NFC Switch",
