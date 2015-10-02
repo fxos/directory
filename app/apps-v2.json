@@ -86,5 +86,15 @@
       "type": "addon",
       "url": "https://github.com/john-hu/kill-all-active-apps",
       "revision": "1da69da899791e1e337ece9bc3c25f51182c17c8"
+    },
+    "https://shinglyu.github.io/fxos-back-button/update.webapp": {
+      "manifestURL": "https://shinglyu.github.io/fxos-back-button/update.webapp",
+      "name": "Back Button",
+      "description": "Add back button (and show window button) to the software home button bar",
+      "icon": "https://shinglyu.github.io/fxos-back-button/icons/icon.png",
+      "author": "Shing Lyu",
+      "type": "addon",
+      "url": "https://github.com/shinglyu/fxos-back-button",
+      "revision": "4050f0c10fac015f2a53d3bf8eaf4863fa49dd23"
     }
 }
