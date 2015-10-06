@@ -178,15 +178,7 @@ export default class UploadView extends View {
       this.showAlertDialog(
         'Upload success! We will now review your app for the Hackerplace.');
       this.hideForm();
-    }).then(() => window.dispatchEvent(new CustomEvent('achievement-rewarded', {
-      detail: {
-        criteria: 'achievements/content-commander',
-        evidence: 'urn:fxos-directory:app:uploaded',
-        name: 'Content Commander',
-        description: 'Submit an app or add-on to Hackerplace',
-        image: './img/content-commander.png'
-      }
-    }))).catch(e => {
+    }).catch(e => {
       this.showAlertDialog('Error exporting app');
       console.log('Error exporting app', e);
     });
