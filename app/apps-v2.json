@@ -126,5 +126,15 @@
       "type": "hosted",
       "url": "https://github.com/elin-moco/ble-explorer",
       "revision": "810a603ce7be1f9dda66ed75870afc6b3feb30a2"
+    },
+    "https://shinglyu.github.io/fxos-unread-icon/update.webapp": {
+      "manifestURL": "https://shinglyu.github.io/fxos-unread-icon/update.webapp",
+      "name": "Unread Icon",
+      "description": "Add unread message count to homescreen icons",
+      "icon": "https://shinglyu.github.io/fxos-unread-icon/icons/icon-128.png",
+      "author": "Shing Lyu",
+      "type": "addon",
+      "url": "https://github.com/shinglyu/fxos-unread-icon",
+      "revision": "9fe622bb14381aea6613c17dbcf14641925a8e52"
     }
 }
