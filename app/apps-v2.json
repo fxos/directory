@@ -77,15 +77,65 @@
       "url": "https://codingfree.com/addons/IMGUR/",
       "revision": "c47fec31d41cd526f7c10c94730ac8fa1c2489b2"
     },
-    "https://mikehenrty.github.io/kill-all-active-apps/update.webapp": {
-      "manifestURL": "https://mikehenrty.github.io/kill-all-active-apps/update.webapp",
-      "name": "Kill Actives",
-      "description": "Add a button to kill all active apps",
-      "icon": "http://mikehenrty.github.io/kill-all-active-apps/icons/128.png",
-      "author": "John Hu",
+    "https://elin-moco.github.io/fxos-addon-sound-switch/update.webapp": {
+      "manifestURL": "https://elin-moco.github.io/fxos-addon-sound-switch/update.webapp",
+      "name": "Sound Switch",
+      "description": "Toggle sounds on and off in utilities tray. Only media volume and ringtones/notifications volume would be affected.",
+      "icon": "https://elin-moco.github.io/fxos-addon-sound-switch/icons/sound.png",
+      "author": "Eddie Lin",
       "type": "addon",
-      "url": "https://github.com/john-hu/kill-all-active-apps",
-      "revision": "1da69da899791e1e337ece9bc3c25f51182c17c8"
+      "url": "https://github.com/elin-moco/fxos-addon-sound-switch",
+      "revision": "3e136d786390fcbd874596693646c708c44568f5"
+    },
+    "https://elin-moco.github.io/fxos-addon-big-unlocker/update.webapp": {
+      "manifestURL": "https://elin-moco.github.io/fxos-addon-big-unlocker/update.webapp",
+      "name": "Bigger Unlocker",
+      "description": "Enlarges the unlocker on lockscreen.",
+      "icon": "https://elin-moco.github.io/fxos-addon-big-unlocker/icons/unlock.png",
+      "author": "Eddie Lin",
+      "type": "addon",
+      "url": "https://github.com/elin-moco/fxos-addon-big-unlocker",
+      "revision": "bffe63cce5d05c133b6531cae5416f5826b5c4eb"
+    },
+    "https://elin-moco.github.io/fxos-addon-draggable-home-btn/update.webapp": {
+      "manifestURL": "https://elin-moco.github.io/fxos-addon-draggable-home-btn/update.webapp",
+      "name": "Draggable Home Button",
+      "description": "Adds a draggable home button to the screen.",
+      "icon": "https://elin-moco.github.io/fxos-addon-draggable-home-btn/icons/home.png",
+      "author": "Eddie Lin",
+      "type": "addon",
+      "url": "https://github.com/elin-moco/fxos-addon-draggable-home-btn",
+      "revision": "0526c2e4f0b5407098dc43f0f0adfc43fe9d75ab"
+    },
+    "https://elin-moco.github.io/fxos-addon-nfc-switch/update.webapp": {
+      "manifestURL": "https://elin-moco.github.io/fxos-addon-nfc-switch/update.webapp",
+      "name": "NFC Switch",
+      "description": "Toggle NFC on and off in utilities tray.",
+      "icon": "https://elin-moco.github.io/fxos-addon-nfc-switch/icons/nfc.png",
+      "author": "Eddie Lin",
+      "type": "addon",
+      "url": "https://github.com/elin-moco/fxos-addon-nfc-switch",
+      "revision": "926ceb55d142fa474ca360ca17beafa894988611"
+    },
+    "https://elin-moco.github.io/ble-explorer/manifest.webapp": {
+      "manifestURL": "https://elin-moco.github.io/ble-explorer/manifest.webapp",
+      "name": "BLE Explorer",
+      "description": "Useful tool to explore/access services/characteristics on your BLE device.",
+      "icon": "https://elin-moco.github.io/ble-explorer/img/icons/icon_128.png",
+      "author": "Eddie Lin",
+      "type": "hosted",
+      "url": "https://github.com/elin-moco/ble-explorer",
+      "revision": "810a603ce7be1f9dda66ed75870afc6b3feb30a2"
+    },
+    "https://shinglyu.github.io/fxos-unread-icon/update.webapp": {
+      "manifestURL": "https://shinglyu.github.io/fxos-unread-icon/update.webapp",
+      "name": "Unread Icon",
+      "description": "Add unread message count to homescreen icons",
+      "icon": "https://shinglyu.github.io/fxos-unread-icon/icons/icon-128.png",
+      "author": "Shing Lyu",
+      "type": "addon",
+      "url": "https://github.com/shinglyu/fxos-unread-icon",
+      "revision": "9fe622bb14381aea6613c17dbcf14641925a8e52"
     },
     "https://novia713.github.io/monchi-dificil/update.webapp": {
       "manifestURL": "https://novia713.github.io/monchi-dificil/update.webapp",
