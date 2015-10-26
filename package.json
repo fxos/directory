@@ -1,0 +1,17 @@
+{
+  "name": "fxos-directory",
+  "description": "Directory Listing for Hackable Apps",
+  "version": "0.0.2",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:fxos/directory.git"
+  },
+  "scripts": {
+    "build": "gulp build"
+  },
+  "license": "MPL",
+  "dependencies": {
+    "fxos-build": "0.7.x",
+    "gulp": "3.8.x"
+  }
+}
