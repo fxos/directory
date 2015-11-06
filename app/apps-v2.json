@@ -136,5 +136,15 @@
       "type": "addon",
       "url": "https://github.com/shinglyu/fxos-unread-icon",
       "revision": "9fe622bb14381aea6613c17dbcf14641925a8e52"
+    },
+    "https://begeeben.github.io/fxos-facebook-menubar/update.webapp": {
+      "manifestURL": "https://begeeben.github.io/fxos-facebook-menubar/update.webapp",
+      "name": "Facebook Menubar",
+      "description": "Keep the menu bar always available on Firefox OS Facebook app.",
+      "icon": "http://begeeben.github.io/fxos-facebook-menubar/icons/facebook-menubar.png",
+      "author": "begeeben",
+      "type": "addon",
+      "url": "https://github.com/begeeben/fxos-facebook-menubar",
+      "revision": "990962c77c3082493e4eb934d5de24f7e3c4b701"
     }
 }
