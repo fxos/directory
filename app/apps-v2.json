@@ -136,5 +136,15 @@
       "type": "addon",
       "url": "https://github.com/shinglyu/fxos-unread-icon",
       "revision": "9fe622bb14381aea6613c17dbcf14641925a8e52"
+    },
+    "https://novia713.github.io/monchi-dificil/update.webapp": {
+      "manifestURL": "https://novia713.github.io/monchi-dificil/update.webapp",
+      "name": "MONCHI Difficult Mode",
+      "description": "Experimental cool stuff for Monchi Game",
+      "icon": "https://novia713.github.io/monchi-dificil/icons/orange-monchi128.png",
+      "author": "Leandro713",
+      "type": "addon",
+      "url": "https://github.com/novia713/monchi-dificil/tree/gh-pages",
+      "revision": "ff869c9dd865cd0167d8b44c56d22dc739037d3c"
     }
 }
